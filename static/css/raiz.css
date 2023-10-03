@@ -13,7 +13,8 @@ body, html {
 #header {
     width: 100%;
     height: 90px;
-    background-color: rgb(6, 6, 74);
+    /*background-color: rgb(6, 6, 74);*/
+    background-color: black;
     -webkit-backdrop-filter: blur(10px);backdrop-filter: blur(10px);
     display: flex;
     
@@ -37,14 +38,83 @@ body, html {
     color: rgb(30, 144, 144);
     font-family: 'Bebas Neue', sans-serif;
 }
-
+/*
 #barra_izquierda {
-    background-color: rgb(25, 25, 86);
+    background-color: rgb(26, 25, 32);
     height: 100vh;
     width: 230px;
     flex-direction: column;
-    border: rgb(60, 60, 146) 1px 0 0 0 ridge;
+    border-width: 0px 1px 0px 0px;
+    border-color: none gainsboro none none;
+    border-style: none solid none none;
+    -webkit-backdrop-filter: blur(-800px);backdrop-filter: blur(-900px);
 }
+*/
+body {
+    background-color: rgb(68, 63, 63);
+    
+    
+}
+
+#articulo {
+    width: 100%;
+    height: 100vh ;
+    background: rgb(52, 52, 52);
+    display: flex;
+    align-content: space-around;
+    align-items: center;
+    justify-content: center;
+    
+    flex-wrap: wrap;
+}
+
+#parte_superior {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#barra_busqueda {
+    width: 490px;
+    height: 40px;
+    background: gray;
+    margin-top: 7px;
+    border-radius: 20px;
+    display: flex;
+    
+}
+
+#busqueda {
+    
+    width: 440px;
+    height: 40px;
+    background: gray;
+    border-radius: 20px 0px 0px 20px;
+    
+
+    
+}
+
+#boton {
+    height: 40px;
+    width: 50px;
+    border-radius: 0px 20px 20px 0px;
+    background: url(../img/lupa-removebg-preview.png)center center / cover no-repeat;
+    background-color: rgb(22, 127, 127);
+}
+
+#contenido {
+    width: 100%;
+    height: 580px;
+    background-color: rgb(19, 105, 105);
+    vertical-align: bottom;
+    position: relative;
+    bottom: -5;
+    
+}
+
 
 
 
@@ -79,10 +149,9 @@ body, html {
 
 
 #pie_pagina {
-    background-color: rgb(25, 25, 86);
     width: 100%;
-    height: 200px;
-    background-color: rgb(6, 6, 74);
+    height: 210px;
+    background-color: black;
     -webkit-backdrop-filter: blur(10px);backdrop-filter: blur(10px);
     display: flex;
     flex-wrap: wrap;
