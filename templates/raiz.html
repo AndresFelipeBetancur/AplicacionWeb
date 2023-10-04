@@ -13,9 +13,9 @@
 
         <div id="contenedor_sesion">
             <div id="estado_sesion">
-                <button id="iniciar_sesion">
-                    <a id="enlace_sesion" href="/iniciaSesion">Registrate</a>
-                </button>
+                
+                    <a class="button" id="enlace_sesion" href="/iniciaSesion">Registrate</a>
+                
             </div>
         </div>
     </div>
@@ -29,10 +29,26 @@
         <div id="parte_superior">
             <div id="barra_busqueda">
                 <input value="Buscar" id="busqueda" type="text">
-                <button id="boton"></button>
+                <button  id="boton"></button>
             </div>
         </div>
         <div id="contenido">
+            <h2 id="titulo_agregados">Agregados recientemente</h2>
+            <section id="nuevos_videos">
+                <div class="videos" id="Agregados">
+                    <div id="video1">
+                        <video width="300" height="200" controls>
+                            <source src="{{ url_for('uploads', filename='perro_escuchando_musica.mp4') }}" type="video/mp4">
+                    </div>
+                    <div id="video1"></div>
+                    <div id="video1"></div>
+                    <div id="video1"></div>
+                    <div id="video1"></div>
+    
+                </div>
+                
+            </section>
+
             
         </div>
     </div>

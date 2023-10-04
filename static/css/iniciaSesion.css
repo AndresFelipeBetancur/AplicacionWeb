@@ -43,7 +43,7 @@ main {
 .campo {
     border: none;
     border-bottom: solid 3px rgb(15, 22, 100);
-    color: rgb(15, 25, 83);
+    color: rgb(19, 33, 111);
     font-size: 18px;
     margin-bottom: 64px;
     padding: 11px 17px 4px 17px;
@@ -62,24 +62,22 @@ main {
     align-self:flex-end;  /*Solo si el padre tiene display:flex*/
 }
 
-#lado_izq {
-    min-height: 100vh;
-    width: 100vw;                           /*horizontal*/ /*vertical*/
+                          /*horizontal*/ /*vertical*/
     
-}
+
 #lado_der {
     position: absolute;
     top: 50%;
     right: 0; /*0*/
     transform: translatey(-50%);
-    -webkit-backdrop-filter: blur(50px);backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(90px);backdrop-filter: blur(90px);
     border-radius: 24px 0 0 24px;
     padding: 32px 13px;
     margin: 75px;
 
 }
 .etiqueta {
-    color: #1b5ed9
+    color: #c2c6cd
 }
 .campo {
     border-bottom: solid 0px 2px 2px 2px #0c0b4c ;
@@ -97,7 +95,7 @@ main {
     
 
 }
-    #lado_izq, #lado_der {
+        #lado_der {
         width: 500px;
         height: 500px;
         
