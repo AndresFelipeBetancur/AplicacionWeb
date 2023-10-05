@@ -35,15 +35,30 @@
         <div id="contenido">
             <h2 id="titulo_agregados">Agregados recientemente</h2>
             <section id="nuevos_videos">
-                <div class="videos" id="Agregados">
-                    <div id="video1">
+
+                    <div class="caja-videos" >
+                        <h4 class="titulo-video">perro escuchando musica</h4>
                         <video width="300" height="200" controls>
-                            <source src="{{ url_for('uploads', filename='perro_escuchando_musica.mp4') }}" type="video/mp4">
+                        <source src="{{ url_for('uploads', filename='perro_escuchando_musica.mp4') }}" type="video/mp4">
                     </div>
-                    <div id="video1"></div>
-                    <div id="video1"></div>
-                    <div id="video1"></div>
-                    <div id="video1"></div>
+
+                    <div class="caja-videos" >
+                        <h4 class="titulo-video">Gato</h4>
+                        <video width="300" height="200" controls>
+                        <source src="{{ url_for('uploads', filename='video gato.mp4') }}" type="video/mp4">
+                    </div>
+
+                    <div class="caja-videos" >
+                        <h4 class="titulo-video">f en el chat</h4>
+                        <video width="300" height="200" controls>
+                        <source src="{{ url_for('uploads', filename='mario.mp4') }}" type="video/mp4">
+                    </div>
+
+                    <div class="caja-videos" >
+                        <h4 class="titulo-video">perro escuchando musica</h4>
+                        <video width="300" height="200" controls>
+                        <source src="{{ url_for('uploads', filename='perro_escuchando_musica.mp4') }}" type="video/mp4">
+                    </div>
     
                 </div>
                 

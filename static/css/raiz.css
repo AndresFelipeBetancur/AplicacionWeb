@@ -185,19 +185,32 @@ a.button {
 
 #nuevos_videos {
     background: black;
-    height: 250px;
+    height: 270px;
     display: flex;
     align-items: center;
-}
-
-.videos {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 80px;
+    justify-content: space-evenly;
 }
 
 
+.caja-videos {
+    background-color: blue;
+    height: 270px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    align-content: space-around;
+    
+}
+
+.titulo-video{
+    text-align: center;
+    font-size: larger;
+    height: 15px;
+    width: 300px;
+    font-family: 'Bebas Neue', sans-serif;
+}
 
 
 
