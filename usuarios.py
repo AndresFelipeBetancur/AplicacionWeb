@@ -1,4 +1,4 @@
-import datetime
+from datetime import datetime
 import hashlib
 import os
 
@@ -18,8 +18,8 @@ class Usuarios:
         self.cursor.execute(sql)
         self.conDB.commit()
         
-    def buscar(self,id):
-        sql = f"SELECT nombre FROM usuarios WHERE idusuario='{id}'"
+    def buscar(self,correo):
+        sql = f"SELECT nombreUsuario FROM usuarios WHERE correo='{correo}'"
         self.cursor.execute(sql)
         resultado = self.cursor.fetchall()
         self.conDB.commit()

@@ -57,15 +57,18 @@ body, html {
 }
 
 #estado_sesion {
-    height: 40px;
-    width: 200px;
-    background: rgb(10, 112, 112);
+    height: 45px;
+    width: 400px;
+    background: rgb(29, 122, 158);
     margin-right: 40px;
-    border-radius: 25px;
+    border-radius: 10px 10px 10px 10px;
     display: flex;
     align-items:center;
-    justify-content: center;
+    justify-content:flex-start;
     align-content: center;
+    border: 5px solid black;
+   
+
     
 }
 
@@ -76,10 +79,30 @@ body, html {
 }
 
 #enlace_sesion {
-    height: 40px;
+    height: 45px;
     width: 200px;
     color: black;
-    
+    background-color: rgb(90, 101, 102);
+    transition: background-color 0.7s;
+    border-radius: 0px 10px 10px 0px;
+
+}
+#enlace_registro {
+    height: 45px;
+    width: 200px;
+    color: black;
+    background-color: rgb(90, 101, 102);
+    transition: background-color 0.7s;
+    border-radius: 10px 0px 0px 10px;
+     
+}
+
+#enlace_registro:hover {
+    background-color: rgb(29, 122, 158);
+}
+
+#enlace_sesion:hover {
+    background-color: rgb(29, 122, 158);
 }
 
 #contenedor_imagen_sesion {
@@ -150,11 +173,21 @@ body {
 }
 
 #boton {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    text-decoration: none;
+    color: initial;
     height: 40px;
     width: 50px;
     border-radius: 0px 20px 20px 0px;
     background: url(../img/lupa-removebg-preview.png)center center / cover no-repeat;
     background-color: rgb(154, 165, 165);
+    transition: background-color 0.7s;
+}
+
+#boton:hover {
+    background-color: rgb(29, 122, 158);
 }
 
 a.button {
