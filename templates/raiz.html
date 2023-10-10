@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>video viewer online</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/raiz.css' ) }}">
+    <link rel="shortcut icon" href="../static/img//CP9.jpg">
 </head>
 <body>
     <div id="header">
@@ -12,10 +13,14 @@
         <div id="texto_logo"><h1>video viewer<a id="numero_texto">Beta</a></h1></div>
 
         <div id="contenedor_sesion">
+
             <div id="estado_sesion">
                 
-                    <a class="button" id="enlace_sesion" href="/iniciaSesion">Registrate</a>
-                
+                <a class="button" id="enlace_sesion" href="/registro">Registrate</a>
+                {% if foto %}
+                <div id="contenedor_imagen_sesion">
+                <img href="{{foto}}"></img>
+                {% endif %}
             </div>
         </div>
     </div>

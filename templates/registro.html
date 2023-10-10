@@ -14,23 +14,27 @@
         
         <article id="lado_der">
 
-            <form id="forma_prueba" name="" action="forma_prueba">
+            <form method="post" id="forma_prueba" name="" action="/registrarse">
 
                 <label for="campo_usuario" class="etiqueta">Tu correo electronico</label>
-                <input type="email" class="campo" name="campo_usuario" id="campo_usuario" inputmode="email" minlength="15" required>
+                <input type="email" class="campo" name="correo" id="campo_usuario" inputmode="email" minlength="15" required>
 
                 <label for="campo_usuario" class="etiqueta">Tu nombre de usuario</label>            <!--teclado movil-->  <!--[rango de ingreso], {tamño de ingreso}-->
-                <input type="text" name="campo_usuario" id="campo_usuario" inputmode="numeric" pattern="[0-9]{15}" minlength="7" maxlength="15" tabindex="1" required class="campo"> 
+                <input type="text" name="nombreUsuario" id="campo_usuario"  minlength="3" maxlength="15" tabindex="1" required class="campo"> 
 
                 <label for="campo_clave" class="etiqueta">Tu contraseña</label>
-                <input type="password" name="campo_clave" id="campo_clave"
+                <input name="contraseña" type="password" name="campo_clave" id="campo_clave"
                 tabindex="2" required class="campo">
+
+                <label class="etiqueta" for="campo_foto">imagen de usuario: </label>
+                <input id="campo_usurio" required type="file" name="fotoUsuario">
 
                 <button type="submit" id="btn_entrar" tabindex="3">ENTRAR</button>
 
             </form>
 
         </article>
+        <h1>{{msg}}</h1>
     </main> 
 
 </body>

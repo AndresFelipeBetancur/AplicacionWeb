@@ -30,7 +30,7 @@ main {
 #forma_prueba {
     display: flex;
     flex-direction:column; /*column*/
-    padding: 36px;
+    padding: 30px;
     margin: 0;
 }
 
@@ -97,7 +97,7 @@ main {
 }
         #lado_der {
         width: 500px;
-        height: 500px;
+        height: 700px;
         
     }
     #lado_der {
@@ -114,9 +114,9 @@ main {
     }
 
 #forma_prueba {
-    max-width: 400px;
-    min-width: 280px;
-    width: 83%;
+    width: 400px;
+    height: 650px;
+    
 }
 
 

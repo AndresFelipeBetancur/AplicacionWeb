@@ -50,6 +50,8 @@ body, html {
     align-items: center;
     justify-content: flex-end;
     align-content: center;
+    padding: 25px;
+    
     
     
 }
@@ -61,7 +63,7 @@ body, html {
     margin-right: 40px;
     border-radius: 25px;
     display: flex;
-    align-items: center;
+    align-items:center;
     justify-content: center;
     align-content: center;
     
@@ -78,6 +80,13 @@ body, html {
     width: 200px;
     color: black;
     
+}
+
+#contenedor_imagen_sesion {
+    height: 40px;
+    width: 40px;
+    background-color: bisque;
+    border-radius: 10px;
 }
 /*
 #barra_izquierda {
