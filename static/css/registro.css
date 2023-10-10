@@ -21,8 +21,8 @@ main {
     position: relative;
     display:flex;
     justify-content: center;
-    align-items: center;
-    align-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
     
 }
 
@@ -56,9 +56,10 @@ main {
     border-radius: 8px;
     color: white;
     font-size: 21px;
-    margin: 0;
+    margin: 10px;
     padding: 21px;
     width: 130px;
+    margin-top: 20px;
     align-self:flex-end;  /*Solo si el padre tiene display:flex*/
 }
 
@@ -66,14 +67,16 @@ main {
     
 
 #lado_der {
+    
     position: absolute;
-    top: 50%;
-    right: 0; /*0*/
-    transform: translatey(-50%);
+    top: 30%;
+    right: 0; 
+    transform: translatey(-30%);
+    
     -webkit-backdrop-filter: blur(90px);backdrop-filter: blur(90px);
     border-radius: 24px 0 0 24px;
     padding: 32px 13px;
-    margin: 75px;
+    margin: 20px;
 
 }
 .etiqueta {
@@ -97,7 +100,7 @@ main {
 }
         #lado_der {
         width: 500px;
-        height: 700px;
+        height: 620px;
         
     }
     #lado_der {
@@ -115,8 +118,6 @@ main {
 
 #forma_prueba {
     width: 400px;
-    height: 650px;
+    height: 620px;
     
 }
-
-

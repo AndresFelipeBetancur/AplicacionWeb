@@ -24,3 +24,11 @@ class Usuarios:
         resultado = self.cursor.fetchall()
         self.conDB.commit()
         return resultado
+    
+    def loguear(self,correo,contra):
+        cifrada = hashlib.sha256(contra.encode("utf-8")).hexdigest()
+        sql=f"SELECT nombreUsuario,foto FROM usuarios WHERE correo='{correo}' AND contraseña='{cifrada}'"
+        self.cursor.execute(sql)
+        resultado = self.cursor.fetchall()
+        self.conDB.commit()
+        return resultado
