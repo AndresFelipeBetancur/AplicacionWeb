@@ -68,7 +68,7 @@ def loguear():
         foto = misUsuarios.foto(correo)
         return render_template("/raiz.html",bienvenida=f"¡Bienvenido {resultado[0][0]}!",fot=foto)
     else:
-        return render_template("/login.html",msg="Credenciales incorrectas",msg2=resultado)
+        return render_template("/login.html",msg="Credenciales incorrectas")
     
   
 

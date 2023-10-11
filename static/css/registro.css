@@ -89,6 +89,11 @@ main {
 
 #btn_entrar {
     background: #0b667b;
+    transition: 0.3s;
+}
+
+#btn_entrar:hover {
+    background-color: #0c0b4c;
 }
 
 main {
