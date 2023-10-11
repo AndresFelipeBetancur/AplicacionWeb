@@ -11,17 +11,20 @@
     <div id="header">
         <div id="img_div"></div>
         <div id="texto_logo"><h1>video viewer<a id="numero_texto">Beta</a></h1></div>
-
         <div id="contenedor_sesion">
-
+            <div id="usuario">
+                <div id="bienvenida">  
+                    <h3 >{{bienvenida}}</h3>
+                </div>  
+                {% if fot %}
+                <img id="imagenUsuario"  width="60" height="60" src="uploads/{{fot}}" alt="">
+                {%endif%}
+            </div>
             <div id="estado_sesion">
                 
                 <a class="button" id="enlace_registro" href="/registro">Registrate</a>
                 <a class="button" id="enlace_sesion" href="/loguin">Inciar Sesión</a>
-                {% if foto %}
-                <div id="contenedor_imagen_sesion">
-                <img href="{{foto}}"></img>
-                {% endif %}
+                
             </div>
         </div>
     </div>
@@ -33,6 +36,7 @@
     -->
     <div id="articulo">
         <div id="parte_superior">
+            
             <div id="barra_busqueda">
                 <input value="Buscar" id="busqueda" type="text">
                 <a  id="boton"></a>

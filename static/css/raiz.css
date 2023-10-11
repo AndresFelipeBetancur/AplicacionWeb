@@ -48,13 +48,43 @@ body, html {
     width: 1200px;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    align-content: center;
+    justify-content: space-between;
+    align-content:space-between;
     padding: 25px;
     
-    
-    
 }
+
+#usuario {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-content: center;
+}
+
+#imagenUsuario {
+    border-radius: 20px;
+    border: 2px solid transparent; /* Borde inicial transparente */
+    position: relative;
+    animation: colorChange 2s linear infinite;
+}
+
+@keyframes colorChange {
+    0% {
+      border-color: red;
+    }
+    25% {
+      border-color: blue;
+    }
+    50% {
+      border-color: green;
+    }
+    75% {
+      border-color: orange;
+    }
+    100% {
+      border-color: red;
+    }
+  }
 
 #estado_sesion {
     height: 45px;
@@ -146,8 +176,20 @@ body {
     height: 80px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content:center;
+    
     background-color: rgb(19, 105, 105);
+}
+
+#bienvenida {
+    font-size: 28px;
+    color: antiquewhite;
+}
+
+#imagenUsuario {
+    background: url(../img/CP9-fotor-20231002212114.png)center center / cover no-repeat;
+    height: 80px;
+    width: 80px;
 }
 
 #barra_busqueda {
@@ -157,6 +199,7 @@ body {
     margin-top: 7px;
     border-radius: 20px;
     display: flex;
+   
     
 }
 

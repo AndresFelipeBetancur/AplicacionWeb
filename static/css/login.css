@@ -89,6 +89,11 @@ main {
 
 #btn_entrar {
     background: #0b667b;
+    transition: 0.3s;
+}
+
+#btn_entrar:hover {
+    background-color: rgb(9, 0, 255);
 }
 
 main {
@@ -100,7 +105,7 @@ main {
 }
         #lado_der {
         width: 500px;
-        height: 620px;
+        height: 550px;
         
     }
     #lado_der {

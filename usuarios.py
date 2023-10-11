@@ -3,10 +3,20 @@ import hashlib
 import os
 
 class Usuarios:
+    
     def __init__(self,app,conDB,cursor):
         self.app = app
         self.conDB = conDB
         self.cursor = cursor
+    
+    def foto(self, correo):
+        sql = f"SELECT fotoUsuario FROM usuarios WHERE correo='{correo}'"
+        self.cursor.execute(sql)
+        resultado = self.cursor.fetchall()
+        self.conDB.commit()
+        if resultado:
+            return resultado[0][0]  
+        
     
     def registrar(self,usuario):
         cifrada=hashlib.sha256(usuario[2].encode("utf-8")).hexdigest()
@@ -27,7 +37,7 @@ class Usuarios:
     
     def loguear(self,correo,contra):
         cifrada = hashlib.sha256(contra.encode("utf-8")).hexdigest()
-        sql=f"SELECT nombreUsuario,foto FROM usuarios WHERE correo='{correo}' AND contraseña='{cifrada}'"
+        sql=f"SELECT nombreUsuario,fotoUsuario FROM usuarios WHERE correo='{correo}' AND contraseña='{cifrada}'"
         self.cursor.execute(sql)
         resultado = self.cursor.fetchall()
         self.conDB.commit()
