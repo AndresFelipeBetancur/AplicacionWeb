@@ -1,0 +1,154 @@
+* {
+    box-sizing: border-box;
+    transform: all 0.3s ease-in-out; 
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+#texto {
+    color: aliceblue;
+}
+
+body {
+    font-family:'Segoe UI', sans-serif;
+    font-size: 16px;
+}
+
+main {
+    background-color: rgb(252,252,252);
+    margin: 0;
+    min-height: 100vh;
+    padding: 0;
+    position: relative;
+    display:flex;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    
+}
+
+
+#forma_prueba {
+    display: flex;
+    flex-direction:column; /*column*/
+    padding: 30px;
+    margin: 0;
+}
+
+.etiqueta {
+    color: rgb(74, 74, 74);
+    font-size: 15px;
+    margin-bottom: 8px;    
+}
+
+.campo {
+    border: none;
+    border-bottom: solid 3px rgb(20, 78, 137);
+    color: rgb(19, 33, 111);
+    font-size: 18px;
+    margin-bottom: 64px;
+    padding: 11px 17px 4px 17px;
+    width: 100%;
+    background: transparent;
+}
+
+#btn_entrar {
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 21px;
+    margin: 10px;
+    padding: 18px;
+    width: 130px;
+    margin-top: 50px;
+    align-self:flex-end;  /*Solo si el padre tiene display:flex*/
+}
+
+                          /*horizontal*/ /*vertical*/
+    
+
+#lado_der {
+    
+    position: absolute;
+    top: 30%;
+    right: 0; 
+    transform: translatey(-30%);
+    background-color: #1a1919;
+    -webkit-backdrop-filter: blur(100px);backdrop-filter: blur(100px);
+    border-radius: 24px 0 0 24px;
+    padding: 32px 13px;
+    margin: 20px;
+
+}
+.etiqueta {
+    color: #c2c6cd
+}
+.campo {
+    border-bottom: solid 0px 2px 2px 2px #16508a ;
+    background-color: transparent;
+}
+
+#btn_entrar {
+    background: #0b667b;
+    transition: 0.3s;
+}
+
+#btn_entrar:hover {
+    background-color: rgb(9, 0, 255);
+}
+
+main {
+    align-items:flex-start;
+    align-content:flex-end;
+    justify-content: end;
+    background: url('../img/subirvideo.jpg') center center / cover no-repeat;
+
+    
+
+}
+        #lado_der {
+        width: 500px;
+        height: 550px;
+        
+    }
+    #lado_der {
+        border-radius: 40px;
+        position: relative;
+        top: 0;
+        right: initial;
+        transform: rotateY(0);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+#forma_prueba {
+    width: 500px;
+    height: 550px;
+    display: flex;
+    align-items: start;
+    align-content: space-between;
+    justify-content:flex-start;
+    justify-items: self-end;
+    
+}
+
+#imagen_subir {
+    justify-self: flex-start;
+    align-self: flex-end;
+   
+    
+    
+}
+
+#subeVideo {
+    margin-top: -40px;
+    justify-self: flex-start;
+    
+    
+}

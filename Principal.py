@@ -76,7 +76,9 @@ def cierreSesion():
     session.clear()
     return redirect("/")
 
-
+@app.route("/subirVideo")
+def subirVideo():
+    return render_template("subirVideo.html")
 
 if __name__=='__main__':
     app.run(host="0.0.0.0",debug=True,port="8090") 

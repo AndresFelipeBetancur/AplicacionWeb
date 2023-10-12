@@ -167,7 +167,7 @@ body, html {
 }
 */
 body {
-    background-color: rgb(68, 63, 63);
+    background-color: #0f0f0f;
     
     
 }
@@ -208,7 +208,7 @@ body {
 #barra_busqueda {
     width: 490px;
     height: 40px;
-    background: rgb(57, 57, 57);
+    background: rgb(90, 101, 102);
     margin-top: 7px;
     border-radius: 20px;
     display: flex;

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sube un video</title>
+    <link rel="shortcut icon" href="../static/img//CP9.jpg">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/subirVideo.css' ) }}">
+</head>
+<body>
+    <main>
+        
+        <article id="lado_der">
+
+            <form method="post" id="forma_prueba" name="" action="/SubirVideo" enctype="multipart/form-data">
+                
+                <h1 id="texto">El lugar donde nacen las ideas</h1>
+
+                <label for="texto" class="etiqueta">Nombre para el video:</label>
+                <input type="text" class="campo" name="texto" id="campo_usuario" required>
+
+                <label for="video" id="subeVideo" class="etiqueta">Sube tu video:</label>
+                <input type="file" name="video" id="campo_usuario"required>
+
+                <div id="imagen_subir">
+                <img   height="120px" width="120px" src="../static/img/capisub.png" alt="">
+                </div>
+                <button type="submit" id="btn_entrar" tabindex="3">SUBIR</button>
+
+            </form>
+
+        </article>
+        <h1>{{msg}}</h1>
+    </main> 
+
+</body>
+</html>
