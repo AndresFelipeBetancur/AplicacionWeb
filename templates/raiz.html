@@ -23,7 +23,10 @@
             <div id="estado_sesion">
                 
                 <a class="button" id="enlace_registro" href="/registro">Registrate</a>
-                <a class="button" id="enlace_sesion" href="/loguin">Inciar Sesión</a>
+                <a class="button" id="enlace_sesion"  href="/loguin">Inciar Sesión</a>
+                {% if fot %}
+                <a class="button" id="enlace_cerrar" href="/cerrarSesion">Cerrar Sesión</a>
+                {% endif %}
                 
             </div>
         </div>
@@ -34,6 +37,7 @@
         
     </div>
     -->
+    <br>
     <div id="articulo">
         <div id="parte_superior">
             
@@ -42,30 +46,37 @@
                 <a  id="boton"></a>
             </div>
         </div>
+        <br>
+        {% if fot %}
+        <div id="opciones_usuario">
+            <div id="opciones_videos"><a id="usuarios" class="button" href="">Subir un video</a></div>
+            <div id="opciones_videos"><a id="usuarios" class="button" href="">mirar mis videos</a></div>
+        </div>
+        {% endif %}
         <div id="contenido">
             <h2 id="titulo_agregados">Agregados recientemente</h2>
             <section id="nuevos_videos">
 
                     <div class="caja-videos" >
-                        <h4 class="titulo-video">perro escuchando musica</h4>
+                        
                         <video width="300" height="200" controls>
                         <source src="{{ url_for('uploads', filename='perro_escuchando_musica.mp4') }}" type="video/mp4">
                     </div>
 
                     <div class="caja-videos" >
-                        <h4 class="titulo-video">Gato</h4>
+                        
                         <video width="300" height="200" controls>
                         <source src="{{ url_for('uploads', filename='video gato.mp4') }}" type="video/mp4">
                     </div>
 
                     <div class="caja-videos" >
-                        <h4 class="titulo-video">f en el chat</h4>
+                        
                         <video width="300" height="200" controls>
                         <source src="{{ url_for('uploads', filename='mario.mp4') }}" type="video/mp4">
                     </div>
 
                     <div class="caja-videos" >
-                        <h4 class="titulo-video">perro escuchando musica</h4>
+                        
                         <video width="300" height="200" controls>
                         <source src="{{ url_for('uploads', filename='perro_escuchando_musica.mp4') }}" type="video/mp4">
                     </div>

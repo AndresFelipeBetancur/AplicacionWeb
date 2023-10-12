@@ -1,6 +1,7 @@
 from datetime import timedelta
 import os
 from flask import Flask, redirect, render_template, request,send_from_directory,session
+
 import mysql.connector
 from usuarios import Usuarios
 from random import randint
@@ -70,7 +71,10 @@ def loguear():
     else:
         return render_template("/login.html",msg="Credenciales incorrectas")
     
-  
+@app.route("/cerrarSesion")
+def cierreSesion():
+    session.clear()
+    return redirect("/")
 
 
 
