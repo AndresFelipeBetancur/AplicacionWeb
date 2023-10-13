@@ -5,7 +5,7 @@ from flask import Flask, redirect, render_template, request,send_from_directory,
 import mysql.connector
 from usuarios import Usuarios
 from random import randint
-
+from videos import Videos
 
 
 conexion = mysql.connector.connect(
@@ -18,6 +18,7 @@ conexion = mysql.connector.connect(
 miCursor = conexion.cursor()
 app = Flask(__name__)
 misUsuarios = Usuarios(app,conexion,miCursor)
+misVideos = Videos(app,conexion,miCursor)
 
 app.secret_key=str(randint(100000,999999)) 
 app.config["PERMANENT_SESSION_LIFETIME"] = timedelta(minutes=40)
@@ -85,7 +86,7 @@ def Regresar():
     if session.get('loginOk'):
         nombre_usuario = session.get("nombreUsuario")
         correo = session.get("correo")
-        foto_usuario = misUsuarios.foto(correo)  # Asume que misUsuarios tiene un método foto
+        foto_usuario = misUsuarios.foto(correo)  
         return render_template("/raiz.html", bienvenida=f"¡Bienvenido {nombre_usuario}!",fot=foto_usuario)
     else:
         return redirect("/")
@@ -101,7 +102,13 @@ def subirVideo():
 
 @app.route("/subir")
 def subir():
+    correo = session.get("correo")
+    nombre_usuario = session.get("nombreUsuario")
+    nombre = request.form["nombreVideo"]
     video = request.files["video"]
+    portada = request.files["portada"]
+    archivo = [correo,nombre_usuario,nombre,video,portada]
+    misVideos.subir(archivo)
 
 if __name__=='__main__':
     app.run(host="0.0.0.0",debug=True,port="8090") 
