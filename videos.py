@@ -9,4 +9,4 @@ class Videos:
         self.conDB = conDB
         self.cursor = cursor
         
-    def subir(self,)
+  

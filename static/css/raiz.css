@@ -207,8 +207,8 @@ body {
 
 #barra_busqueda {
     width: 490px;
-    height: 40px;
-    background: rgb(90, 101, 102);
+    height: 43px;
+    background: transparent;
     margin-top: 7px;
     border-radius: 20px;
     display: flex;
@@ -219,10 +219,12 @@ body {
 #busqueda {
     
     width: 440px;
-    height: 40px;
-    background: rgb(192, 182, 182)13;
-    border: 3px solid rgb(212, 202, 202);
+    height: 43px;
+    background: transparent;
+    border: 1px solid #484747;
     border-radius: 20px 0px 0px 20px;
+    color: #5c5b5b;
+    
     
 
     
@@ -234,12 +236,13 @@ body {
     appearance: button;
     text-decoration: none;
     color: initial;
-    height: 40px;
+    height: 43px;
     width: 50px;
     border-radius: 0px 20px 20px 0px;
     background: url(../img/lupa-removebg-preview.png)center center / cover no-repeat;
     background-color: rgb(154, 165, 165);
     transition: background-color 0.7s;
+    border-color: #484747;
 }
 
 #boton:hover {
@@ -293,13 +296,14 @@ a.button {
 
 .caja-videos {
     background-color: #1d1d1d;
-    height: 270px;
+    height: 170px;
     width: 300px;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: start;
+    justify-content: flex-start;
     flex-direction: column;
-    align-content: space-around;
+    align-content: start;
+    
     
 }
 
@@ -316,9 +320,10 @@ a.button {
     height: 50px;
     background-color: #0f0f0f;
     display: flex;
+    justify-items: center;
     align-items: center;
-    align-content: space-around;
-    justify-content: space-around;
+    align-content: center;
+    justify-content: center;
 }
 
 #opciones_videos {
@@ -328,6 +333,7 @@ a.button {
     align-items: center;
     align-content: center;
     justify-content: center;
+    justify-items: center;
 }
 
 #usuarios {

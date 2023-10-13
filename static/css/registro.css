@@ -57,10 +57,10 @@ main {
     color: white;
     font-size: 21px;
     margin: 10px;
-    padding: 21px;
-    width: 130px;
+    padding: 17px;
+    width: 230px;
     margin-top: 20px;
-    align-self:flex-end;  /*Solo si el padre tiene display:flex*/
+    align-self:center;  /*Solo si el padre tiene display:flex*/
 }
 
                           /*horizontal*/ /*vertical*/
@@ -125,4 +125,19 @@ main {
     width: 400px;
     height: 620px;
     
+}
+
+#boton {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    color: initial;
+    height: 53px;
+    width: 170px;
+    border-radius:20px ;
+    background-color: rgb(154, 165, 165);
+    transition: background-color 0.7s;
+    border-color: #484747;
+    align-self: center;
+    text-align: center;
 }

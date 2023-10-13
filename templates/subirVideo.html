@@ -12,7 +12,7 @@
         
         <article id="lado_der">
 
-            <form method="post" id="forma_prueba" name="" action="/SubirVideo" enctype="multipart/form-data">
+            <form method="post" id="forma_prueba" name="" action="/Subir" enctype="multipart/form-data">
                 
                 <h1 id="texto">El lugar donde nacen las ideas</h1>
 
@@ -20,12 +20,16 @@
                 <input type="text" class="campo" name="texto" id="campo_usuario" required>
 
                 <label for="video" id="subeVideo" class="etiqueta">Sube tu video:</label>
-                <input type="file" name="video" id="campo_usuario"required>
+                <div class="custom-file-input">
+                    <input type="file" name="video" required>
+                    <button class="custom-button">Seleccionar archivo</button>
+                </div>
 
                 <div id="imagen_subir">
                 <img   height="120px" width="120px" src="../static/img/capisub.png" alt="">
                 </div>
-                <button type="submit" id="btn_entrar" tabindex="3">SUBIR</button>
+                <button type="submit" id="btn_entrar" tabindex="3">Subir</button>
+                <a href="/Regresar" id="boton1" tabindex="4">Regresar</a>
 
             </form>
 

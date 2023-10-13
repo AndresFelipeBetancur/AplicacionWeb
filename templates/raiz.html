@@ -39,27 +39,28 @@
     -->
     <br>
     <div id="articulo">
-        <div id="parte_superior">
-            
-            <div id="barra_busqueda">
-                <input value="Buscar" id="busqueda" type="text">
-                <a  id="boton"></a>
-            </div>
-        </div>
-        <br>
         {% if fot %}
         <div id="opciones_usuario">
             <div id="opciones_videos"><a id="usuarios" class="button" href="/subirVideo">Subir un video</a></div>
             <div id="opciones_videos"><a id="usuarios" class="button" href="">mirar mis videos</a></div>
         </div>
         {% endif %}
+        <div id="parte_superior">
+            
+            <div id="barra_busqueda">
+                <input placeholder="Buscar" id="busqueda" type="text">
+                <a  id="boton"></a>
+            </div>
+        </div>
+        <br>
+        
         <div id="contenido">
             <h2 id="titulo_agregados">Agregados recientemente por el creador</h2>
             <section id="nuevos_videos">
 
                     <div class="caja-videos" >
                         
-                        <video width="300" height="200" controls>
+                        <video  width="300" height="200" controls>
                         <source src="{{ url_for('uploads', filename='perro_escuchando_musica.mp4') }}" type="video/mp4">
                     </div>
 
@@ -72,15 +73,15 @@
                     <div class="caja-videos" >
                         
                         <video width="300" height="200" controls>
-                        <source src="{{ url_for('uploads', filename='mario.mp4') }}" type="video/mp4">
+                        <source src="{{ url_for('uploads', filename='perro_escuchando_musica.mp4') }}" type="video/mp4">
                     </div>
-
+                    
                     <div class="caja-videos" >
                         
                         <video width="300" height="200" controls>
-                        <source src="{{ url_for('uploads', filename='perro_escuchando_musica.mp4') }}" type="video/mp4">
+                        <source src="{{ url_for('uploads', filename='mario.mp4') }}" type="video/mp4">
                     </div>
-    
+
                 </div>
                 
             </section>
