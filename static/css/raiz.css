@@ -287,7 +287,7 @@ a.button {
 
 #nuevos_videos {
     background: #0f0f0f;
-    height: 270px;
+    height: 230px;
     display: flex;
     align-items: self-start;
     justify-content: space-evenly;
@@ -350,8 +350,47 @@ a.button {
     background-color: rgb(29, 122, 158) ;
 }
 
+#titulo_contenido {
+    color: antiquewhite;
+    text-align: center;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 27px;
+}
 
+#contenedor_contenido {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
+    justify-items: center;
+}
 
+#contenedor_portada {
+    border-radius: 10px;
+    background-color: #1d1d1d;
+    width: 320px;
+    height: 200px;
+    display: flex;
+    align-content: stretch;
+
+}
+
+#imagen_portada {
+    
+    width: 320px;
+    height:190px;
+    
+}
+
+#nombre_portada {
+    position: relative;
+    z-index: index 1;
+    color: antiquewhite;
+    text-align: center;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 17px;
+}
 
 
 
@@ -463,3 +502,4 @@ a.button {
     padding: 20px;
     
 }
+
