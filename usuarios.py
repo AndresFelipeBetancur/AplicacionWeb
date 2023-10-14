@@ -28,6 +28,7 @@ class Usuarios:
         self.cursor.execute(sql)
         self.conDB.commit()
         
+        
     def buscar(self,correo):
         sql = f"SELECT nombreUsuario FROM usuarios WHERE correo='{correo}'"
         self.cursor.execute(sql)

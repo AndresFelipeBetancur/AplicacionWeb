@@ -49,10 +49,11 @@ main {
     border-bottom: solid 3px rgb(20, 78, 137);
     color: rgb(19, 33, 111);
     font-size: 18px;
-    margin-bottom: 64px;
+    margin-bottom: 44px;
     padding: 11px 17px 4px 17px;
     width: 100%;
     background: transparent;
+    
 }
 
 #btn_entrar {
@@ -111,13 +112,13 @@ main {
 }
         #lado_der {
         width: 500px;
-        height: 550px;
+        height: 650px;
         
     }
     #lado_der {
         border-radius: 40px;
         position: relative;
-        top: 0;
+        top: -20px;
         right: initial;
         transform: rotateY(0);
         display: flex;
@@ -129,25 +130,20 @@ main {
 
 #forma_prueba {
     width: 500px;
-    height: 550px;
+    height: 650px;
     display: flex;
     align-items: start;
-    align-content: space-between;
+    align-content: space-around;
     justify-content:flex-start;
-    justify-items: self-end;
+    justify-items: center;
+
     
 }
 
-#imagen_subir {
-    justify-self: flex-start;
-    align-self: flex-end;
-   
-    
-    
-}
+
 
 #subeVideo {
-    margin-top: -40px;
+    
     justify-self: flex-start;
     
     
@@ -215,9 +211,16 @@ main {
 
 .custom-button {
     background-color: #007bff;
+   
     color: #fff;
     border: none;
-    padding: 10px 20px;
+    height: 35px;
+    
     border-radius: 5px;
     cursor: pointer;
+}
+
+#imagen_subir {
+    align-self: flex-end;
+    justify-self: flex-end;
 }

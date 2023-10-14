@@ -12,22 +12,30 @@
         
         <article id="lado_der">
 
-            <form method="post" id="forma_prueba" name="" action="/Subir" enctype="multipart/form-data">
+            <form method="post" id="forma_prueba" name="" action="/subir" enctype="multipart/form-data">
                 
                 <h1 id="texto">El lugar donde nacen las ideas</h1>
 
-                <label for="texto" class="etiqueta">Nombre para el video:</label>
-                <input type="text" class="campo" name="texto" id="campo_usuario" required>
+                <label for="nombreVideo" class="etiqueta">Nombre para el video:</label>
+                <input type="text" class="campo" name="nombreVideo" id="campo_usuario" required>
 
                 <label for="video" id="subeVideo" class="etiqueta">Sube tu video:</label>
                 <div class="custom-file-input">
-                    <input type="file" name="video" required>
+                    <input id="input" class="campo" type="file" name="video" required>
                     <button class="custom-button">Seleccionar archivo</button>
                 </div>
-
-                <div id="imagen_subir">
-                <img   height="120px" width="120px" src="../static/img/capisub.png" alt="">
+                <br>
+                <br>
+                <label for="portada" id="subeVideo" class="etiqueta">Sube la portada de tu vídeo:</label>
+                <div class="custom-file-input">
+                    <input id="input" class="campo" type="file" name="portada" required>
+                    <button class="custom-button">Seleccionar archivo</button>
                 </div>
+                
+                <div id="imagen_subir">
+                    <img   height="120px" width="120px" src="../static/img/capisub.png" alt="">
+                    </div>
+
                 <button type="submit" id="btn_entrar" tabindex="3">Subir</button>
                 <a href="/Regresar" id="boton1" tabindex="4">Regresar</a>
 

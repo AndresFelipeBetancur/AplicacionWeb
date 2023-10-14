@@ -32,9 +32,11 @@ def raiz():
     if session.get('loginOk'):
         nombre_usuario = session.get('nombreUsuario')
         foto_usuario = misUsuarios.foto(nombre_usuario)  # Asume que misUsuarios tiene un método foto
-        return render_template("/raiz.html", nombre=nombre_usuario, foto=foto_usuario)
+        videos = misVideos.buscar()
+        return render_template("/raiz.html", nombre=nombre_usuario, foto=foto_usuario, res=videos)
     else:
-        return render_template("/raiz.html")
+        videos = misVideos.buscar()
+        return render_template("/raiz.html",res=videos)
 
 
 
@@ -100,7 +102,7 @@ def cierreSesion():
 def subirVideo():
     return render_template("subirVideo.html")
 
-@app.route("/subir")
+@app.route("/subir", methods = ['POST'])
 def subir():
     correo = session.get("correo")
     nombre_usuario = session.get("nombreUsuario")
@@ -109,6 +111,7 @@ def subir():
     portada = request.files["portada"]
     archivo = [correo,nombre_usuario,nombre,video,portada]
     misVideos.subir(archivo)
+    return redirect("/")
 
 if __name__=='__main__':
     app.run(host="0.0.0.0",debug=True,port="8090") 
