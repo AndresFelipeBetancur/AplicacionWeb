@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+    transform: all 0.3s ease-in-out; 
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #0f0f0f ;
+    
+}
+
+#caja_video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #0f0f0f;
+    border-radius: 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: stretch;
+ 
+    overflow: hidden; /* Evita que el video se desborde del contenedor */
+}
+
+#video {
+    align-self: self-start;
+    border-radius: 30px;
+    object-fit: cover;
+}
+
+#titulo_video {
+    height: 30px;
+    width: 780px;
+    
+    text-align: center;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+h2 {
+    font-size: 35px;
+    text-align: start;
+    color: antiquewhite;
+}

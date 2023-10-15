@@ -89,10 +89,21 @@
             <section id="padre_contenido">
                 <h2 id="titulo_contenido" class="texto_pie">Contenido Video viewer</h2>
                     <div id="contenedor_contenido">
+
                         <div id="contenedor_portada">
-                            <img id="imagenPortada" src="uploads/{{res[0][3]}}" alt="">
-                            <p id="nombre_portada">{{res[0][2]}}</p>
+                            <div id="contenedor">
+                            <a href="{{ url_for('ver_video', video_id=res[0][1],nombre_video=res[0][2]) }}">
+                                <img id="imagenPortada" src="uploads/{{res[0][3]}}" alt="">
+                                </a>
+                            </div>
+                            <div id="descripcion_portada">
+                                
+                                <p id="nombre_portada">{{res[0][2]}}</p>
+                                <p id="usuario_portada">Subido por: {{res[0][0]}}</p>
+
+                            </div>
                         </div>
+
                     </div>
             </section>
         </div>
@@ -100,8 +111,10 @@
         </div>
     </div>
 
-
-
+    <br>
+    <br>
+    <br>
+    <br>
     <footer id="pie_pagina">
         <div id="div_pie1">  
             <div id="imagen_pie"></div>

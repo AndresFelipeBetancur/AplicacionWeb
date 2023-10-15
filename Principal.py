@@ -73,13 +73,14 @@ def login():
 def loguear():
     correo = request.form['correo']
     contraseña = request.form['contraseña']
-    resultado = misUsuarios.loguear(correo,contraseña)
-    if len(resultado)>0:
+    usuario = misUsuarios.loguear(correo,contraseña)
+    if len(usuario)>0:
         session['loginOk'] = True
-        session['nombreUsuario'] = resultado[0][0]
+        session['nombreUsuario'] = usuario[0][0]
         session['correo'] = correo
         foto = misUsuarios.foto(correo)
-        return render_template("/raiz.html",bienvenida=f"¡Bienvenido {resultado[0][0]}!",fot=foto)
+        resultado = misVideos.buscar()
+        return render_template("/raiz.html",bienvenida=f"¡Bienvenido {usuario[0][0]}!",fot=foto,res=resultado)
     else:
         return render_template("/login.html",msg="Credenciales incorrectas")
 
@@ -112,6 +113,11 @@ def subir():
     archivo = [correo,nombre_usuario,nombre,video,portada]
     misVideos.subir(archivo)
     return redirect("/")
+
+@app.route('/ver_video/<video_id>/<nombre_video>')
+def ver_video(video_id,nombre_video):
+    return render_template('/verVideo.html', video_id=video_id,nombre_video=nombre_video)
+
 
 if __name__=='__main__':
     app.run(host="0.0.0.0",debug=True,port="8090") 

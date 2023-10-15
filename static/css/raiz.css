@@ -365,51 +365,49 @@ a.button {
     justify-content: space-around;
     justify-items: center;
 }
-
 #contenedor_portada {
-    border-radius: 10px;
-    background-color: #1d1d1d;
-    width: 320px;
-    height: 200px;
+    height: 250px;
+    width: 400px; /* Aumenta el ancho del contenedor */
     display: flex;
-    align-content: stretch;
+    flex-direction: column; /* Para que los elementos se apilen verticalmente */
+    align-items: center; /* Centrar verticalmente */
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+#contenedor {
+    width: 400px;
+    height: 190px;
+    border-radius: 10px;
 
 }
 
-#imagen_portada {
-    
-    width: 320px;
-    height:190px;
-    
+#imagenPortada {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
 }
 
-#nombre_portada {
-    position: relative;
-    z-index: index 1;
+#nombre_portada, #usuario_portada {
     color: antiquewhite;
     text-align: center;
     font-family: 'Bebas Neue', sans-serif;
     font-size: 17px;
+    margin: 0;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
 }
 
+#nombre_portada {
+    order: 1; 
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#usuario_portada {
+    order: 2; 
+    text-align: left; 
+    padding-left: 0px;
+}
 
 
 

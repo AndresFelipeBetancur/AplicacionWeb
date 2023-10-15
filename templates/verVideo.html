@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video viewer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/verVideo.css' ) }}">
+</head>
+<body>
+    
+    <div class="caja-video" >
+                        
+        <video height="500px" width="780px" id="video" controls>
+        <source  id="video" src="/uploads/{{video_id}}" type="video/mp4">>
+        </video>
+        <div id="titulo_video"><h2>{{nombre_video}}</h2></div>
+    </div>
+    
+
+</body>
+</html>
