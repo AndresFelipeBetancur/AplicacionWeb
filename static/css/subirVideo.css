@@ -8,10 +8,6 @@ body, html {
     padding: 0;
 }
 
-#texto {
-    color: aliceblue;
-}
-
 body {
     font-family:'Segoe UI', sans-serif;
     font-size: 16px;
@@ -24,9 +20,9 @@ main {
     padding: 0;
     position: relative;
     display:flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: flex-start;
-    align-content: flex-start;
+    align-content: center;
     
 }
 
@@ -34,6 +30,7 @@ main {
 #forma_prueba {
     display: flex;
     flex-direction:column; /*column*/
+    flex-wrap: wrap;
     padding: 30px;
     margin: 0;
 }
@@ -42,18 +39,18 @@ main {
     color: rgb(74, 74, 74);
     font-size: 15px;
     margin-bottom: 8px;    
+    width: 50%;
 }
 
 .campo {
     border: none;
-    border-bottom: solid 3px rgb(20, 78, 137);
+    border-bottom: solid 3px rgb(15, 22, 100);
     color: rgb(19, 33, 111);
     font-size: 18px;
-    margin-bottom: 44px;
+    margin-bottom: 64px;
     padding: 11px 17px 4px 17px;
-    width: 100%;
+    width: 50%;
     background: transparent;
-    
 }
 
 #btn_entrar {
@@ -62,9 +59,9 @@ main {
     color: white;
     font-size: 21px;
     margin: 10px;
-    padding: 18px;
-    width: 130px;
-    margin-top: 50px;
+    padding: 17px;
+    width: 230px;
+    margin-top: 200px;
     align-self:center;  /*Solo si el padre tiene display:flex*/
 }
 
@@ -74,21 +71,18 @@ main {
 #lado_der {
     
     position: absolute;
-    top: 30%;
     right: 0; 
-    transform: translatey(-30%);
-    background-color: #1a1919;
-    -webkit-backdrop-filter: blur(100px);backdrop-filter: blur(100px);
-    border-radius: 24px 0 0 24px;
-    padding: 32px 13px;
-    margin: 20px;
+    
+    -webkit-backdrop-filter: blur(30px);backdrop-filter: blur(30px);
+    border-radius: 24px;
+    margin: 0px;
 
 }
 .etiqueta {
     color: #c2c6cd
 }
 .campo {
-    border-bottom: solid 0px 2px 2px 2px #16508a ;
+    border-bottom: solid 0px 2px 2px 2px #0c0b4c ;
     background-color: transparent;
 }
 
@@ -98,54 +92,36 @@ main {
 }
 
 #btn_entrar:hover {
-    background-color: rgb(9, 0, 255);
+    background-color: #0c0b4c;
 }
 
 main {
-    align-items:flex-start;
-    align-content:flex-end;
-    justify-content: end;
-    background: url('../img/subirvideo.jpg') center center / cover no-repeat;
+    align-items: stretch;
+    background: url('../img/805197.jpg') center center / cover no-repeat;
 
     
 
 }
         #lado_der {
-        width: 500px;
+        width: 750px;
         height: 650px;
         
     }
     #lado_der {
         border-radius: 40px;
-        position: relative;
-        top: -20px;
+        top: 0;
         right: initial;
-        transform: rotateY(0);
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        justify-content: flex-start;
+        align-items: flex-start;
+        align-content: flex-start;
         
     }
 
 #forma_prueba {
-    width: 500px;
-    height: 650px;
-    display: flex;
-    align-items: start;
-    align-content: space-around;
-    justify-content:flex-start;
-    justify-items: center;
-
-    
-}
-
-
-
-#subeVideo {
-    
-    justify-self: flex-start;
-    
+    width: 750px;
+    height: 620px;
     
 }
 
@@ -154,7 +130,7 @@ main {
     -moz-appearance: button;
     appearance: button;
     color: initial;
-    height: 13px;
+    height: 53px;
     width: 170px;
     border-radius:20px ;
     background-color: rgb(154, 165, 165);
@@ -162,25 +138,20 @@ main {
     border-color: #484747;
     align-self: center;
     text-align: center;
+    transition: 0.3s;
+    padding: 15px;
+    text-decoration: none;
 }
 
-#boton1 {
-    -webkit-appearance: button;
-    -moz-appearance: button;
-    appearance: button;
-    color: initial;
-    height: 27px;
-    width: 170px;
-    border-radius:20px ;
-    background-color: rgb(154, 165, 165);
-    transition: background-color 0.3s;
-    border-color: #484747;
-    align-self: center;
+#boton:hover {
+    background-color: #484747;
+}
+
+#Registrate {
+    color: antiquewhite;
     text-align: center;
-}
-
-#boton1:hover {
-    background-color: rgb(74, 79, 79);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 27px;
 }
 
 .input-personalizado {
@@ -220,7 +191,30 @@ main {
     cursor: pointer;
 }
 
-#imagen_subir {
-    align-self: flex-end;
-    justify-self: flex-end;
+#texto {
+    color: white;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+#boton {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    color: initial;
+    height: 43px;
+    width: 170px;
+    border-radius:20px ;
+    background-color: rgb(154, 165, 165);
+    transition: background-color 0.7s;
+    border-color: #484747;
+    align-self: center;
+    text-align: center;
+    justify-self: center;
+    padding: 10px;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+#boton:hover {
+    background-color: #484747;
 }

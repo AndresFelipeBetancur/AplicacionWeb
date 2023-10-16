@@ -46,10 +46,8 @@ def uploads(filename):
 
 @app.route("/registro")
 def Sesion():
-    if session.get('loginOk'):
-        return render_template("/registro.html")
-    else:
-        return redirect("/")
+    return render_template("/registro.html")
+
 
 
 @app.route("/registrarse", methods = ['POST'])
@@ -90,7 +88,8 @@ def Regresar():
         nombre_usuario = session.get("nombreUsuario")
         correo = session.get("correo")
         foto_usuario = misUsuarios.foto(correo)  
-        return render_template("/raiz.html", bienvenida=f"¡Bienvenido {nombre_usuario}!",fot=foto_usuario)
+        videos = misVideos.buscar()
+        return render_template("/raiz.html", bienvenida=f"¡Bienvenido {nombre_usuario}!",fot=foto_usuario,res=videos)
     else:
         return redirect("/")
 

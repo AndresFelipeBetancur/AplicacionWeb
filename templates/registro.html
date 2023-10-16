@@ -16,9 +16,9 @@
         <article id="lado_der">
 
             <form method="post" id="forma_prueba" name="" action="/registrarse" enctype="multipart/form-data">
-
+                <h1 id="Registrate">Registrate</h1>
                 <label for="correo" class="etiqueta">Tu correo electronico</label>
-                <input type="email" class="campo" name="correo" id="campo_usuario" inputmode="email" minlength="15" required>
+                <input type="email" class="campo" name="correo" id="campo_usuario" inputmode="email" minlength="13" required>
 
                 <label for="campo_usuario" class="etiqueta">Tu nombre de usuario</label>            <!--teclado movil-->  <!--[rango de ingreso], {tamño de ingreso}-->
                 <input type="text" name="nombreUsuario" id="campo_usuario"  minlength="3" maxlength="15" tabindex="1" required class="campo"> 
@@ -28,7 +28,10 @@
                 tabindex="2" required class="campo">
 
                 <label class="etiqueta" for="fotoUsuario">imagen de usuario: </label>
-                <input id="campo_usurio" required type="file" name="fotoUsuario">
+                <div class="custom-file-input">
+                    <input id="input" class="campo" type="file" name="portada" required>
+                    <button onclick="document.getElementById('input').click()"type="button" class="custom-button">Seleccionar archivo</button>
+                </div>
 
                 <button type="submit" id="btn_entrar" tabindex="3">Entrar</button>
                 <a href="/Regresar" id="boton">Regresar</a>

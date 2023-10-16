@@ -141,4 +141,11 @@ main {
     align-self: center;
     text-align: center;
     justify-self: center;
+    padding: 10px;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+#boton:hover {
+    background-color: #484747;
 }
