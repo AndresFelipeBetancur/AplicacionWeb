@@ -90,19 +90,19 @@
                 <h2 id="titulo_contenido" class="texto_pie">Contenido Video viewer</h2>
                     <div id="contenedor_contenido">
 
+                        {% for video_info in res %}
                         <div id="contenedor_portada">
                             <div id="contenedor">
-                            <a href="{{ url_for('ver_video', video_id=res[0][1],nombre_video=res[0][2]) }}">
-                                <img id="imagenPortada" src="uploads/{{res[0][3]}}" alt="">
+                                <a href="{{ url_for('ver_video', video_id=video_info[1], nombre_video=video_info[2]) }}">
+                                    <img id="imagenPortada" src="uploads/{{ video_info[3] }}" alt="">
                                 </a>
                             </div>
                             <div id="descripcion_portada">
-                                
-                                <p id="nombre_portada">{{res[0][2]}}</p>
-                                <p id="usuario_portada">Subido por: {{res[0][0]}}</p>
-
+                                <p id="nombre_portada">{{ video_info[2] }}</p>
+                                <p id="usuario_portada">Subido por: {{ video_info[0] }}</p>
                             </div>
                         </div>
+                        {% endfor %}
 
                     </div>
             </section>
