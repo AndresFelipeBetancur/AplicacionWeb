@@ -109,7 +109,8 @@ def subir():
     nombre = request.form["nombreVideo"]
     video = request.files["video"]
     portada = request.files["portada"]
-    archivo = [correo,nombre_usuario,nombre,video,portada]
+    fotoUsuario = misUsuarios.foto(correo)
+    archivo = [correo,nombre_usuario,nombre,video,portada,fotoUsuario]
     misVideos.subir(archivo)
     return redirect("/")
 

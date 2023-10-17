@@ -10,7 +10,7 @@ class Videos:
         self.cursor = cursor
     
     def buscar(self):
-        sql = "SELECT nombreUsuario,video,nombreVideo,portada FROM videos"
+        sql = "SELECT nombreUsuario,video,nombreVideo,portada,FotoUSuario,fechaSubida FROM videos"
         self.cursor.execute(sql)
         resultado = self.cursor.fetchall()
         self.conDB.commit()
@@ -30,8 +30,13 @@ class Videos:
         fname,fext = os.path.splitext(archivo[4].filename)
         nombrePortada = "E" + ahora.strftime("%Y%m%d%H%M%S") + fext
         archivo[4].save("uploads/" + nombrePortada)
-        sql=f"INSERT INTO videos (correoUsuario,nombreUsuario,nombreVideo,portada,video)\
-            VALUES ('{correoUsuario}','{nombreUsuario}','{nombre}','{nombrePortada}','{nombreVideo}')"
+        #Tambien se guardara la foto del usuario que subio el video
+        ahora = datetime.now()
+        fname,fext = os.path.splitext(archivo[5].filename)
+        nombreFoto = "U" + ahora.strftime("%Y%m%d%H%M%S") + fext
+        archivo[5].save("uploads/" + nombreFoto)
+        sql=f"INSERT INTO videos (correoUsuario,nombreUsuario,nombreVideo,portada,video,FotoUsuario)\
+            VALUES ('{correoUsuario}','{nombreUsuario}','{nombre}','{nombrePortada}','{nombreVideo}','{nombreFoto}')"
         self.cursor.execute(sql)
         self.conDB.commit()
         
