@@ -35,3 +35,10 @@ class Videos:
         self.cursor.execute(sql)
         self.conDB.commit()
         
+    def encontrar(self,nombre):
+        sql=f"SELECT nombreUsuario,video,nombreVideo,portada FROM videos\
+        WHERE nombreVideo LIKE '%{nombre}%'"
+        self.cursor.execute(sql)
+        resultado = self.cursor.fetchall()
+        self.conDB.commit()
+        return resultado

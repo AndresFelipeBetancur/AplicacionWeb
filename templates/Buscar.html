@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concidencias</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/buscar.css' ) }}">
+    <link rel="shortcut icon" href="../static/img//CP9.jpg">
+</head>
+<body>
+    <section id="padre_contenido">
+            <div id="contenedor_contenido">
+                <h1 id="titulo_contenido">Coincidencias:</h1>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                {% for video_info in res %}
+                <div id="contenedor_portada">
+                    <div id="contenedor">
+                        <a href="{{ url_for('ver_video', video_id=video_info[1], nombre_video=video_info[2]) }}">
+                            <img id="imagenPortada" src="uploads/{{video_info[3]}}" alt="">
+                        </a>
+                    </div>
+                    <div id="descripcion_portada">
+                        <p id="nombre_portada">{{ video_info[2] }}</p>
+                        <p id="usuario_portada">Subido por: {{ video_info[0] }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+                <br>
+                <br>
+                <br>
+                <a href="/Regresar" id="boton">Regresar</a>
+            </div>
+    </section>
+</body>
+</html>

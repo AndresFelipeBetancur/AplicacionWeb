@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+    transform: all 0.3s ease-in-out; 
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #0f0f0f ;
+    
+    
+}
+
+#titulo_contenido {
+    color: antiquewhite;
+    text-align: center;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 27px;
+}
+#contenedor_contenido {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Centra los elementos horizontalmente */
+    flex-grow: 20px;
+    
+}
+#padre_contenido {
+    
+   
+    height: fit-content;
+    
+   
+}
+
+#contenedor_portada {
+    width: 400px;
+    height: 250px;
+    margin: 15px; /* Espacio entre las portadas */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra verticalmente */
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+#contenedor {
+    width: 100%;
+    max-height: 190px; /* Establece una altura máxima para evitar que el contenido se desborde */
+    overflow: hidden; /* Oculta el contenido que se desborda */
+}
+
+#imagenPortada {
+    width: 100%;
+    height: auto; /* Ajusta automáticamente la altura en función del ancho */
+    border-radius: 10px;
+}
+
+#nombre_portada, #usuario_portada {
+    color: antiquewhite;
+    text-align: center;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 17px;
+    margin: 0;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+}
+
+#nombre_portada {
+    order: 1; 
+}
+
+#usuario_portada {
+    order: 2; 
+    text-align: left; 
+    padding-left: 0px;
+}
+
+#boton {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    color: #0f0f0f;
+    height: 53px;
+    width: 170px;
+    border-radius:20px ;
+    background-color: rgb(154, 165, 165);
+    transition: background-color 0.7s;
+    border-color: #484747;
+    align-self: center;
+    text-align: center;
+    transition: 0.3s;
+    padding: 15px;
+    text-decoration: none;
+}
+
+
+#boton:hover {
+    background-color: #484747;
+}

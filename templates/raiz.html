@@ -48,10 +48,10 @@
         {% endif %}
         <div id="parte_superior">
             
-            <div id="barra_busqueda">
-                <input placeholder="Buscar" id="busqueda" type="text">
-                <a  id="boton"></a>
-            </div>
+            <form method="post" enctype="multipart/form-data" action="/buscar" id="barra_busqueda">
+                <input name="buscar" placeholder="Buscar" id="busqueda" type="text">
+                <button  id="boton" onclick="" type="submit"></button>
+            </form>
         </div>
         <br>
         

@@ -118,5 +118,12 @@ def ver_video(video_id,nombre_video):
     return render_template('/verVideo.html', video_id=video_id,nombre_video=nombre_video)
 
 
+@app.route("/buscar", methods = ['POST'])
+def buscar():
+    vdBuscar = request.form["buscar"]
+    resultado = misVideos.encontrar(vdBuscar)
+    return render_template("/Buscar.html",res=resultado)
+
+
 if __name__=='__main__':
     app.run(host="0.0.0.0",debug=True,port="8090") 

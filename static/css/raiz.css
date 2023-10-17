@@ -240,7 +240,7 @@ body {
     border-radius: 0px 20px 20px 0px;
     background: url(../img/lupa-removebg-preview.png)center center / cover no-repeat;
     background-color: rgb(154, 165, 165);
-    transition: background-color 0.7s;
+    transition: background-color 0.3s;
     border-color: #484747;
 }
 
@@ -363,14 +363,16 @@ a.button {
 }
 #padre_contenido {
     
-    min-height: calc(100vh - 240px); /* 100vh menos la altura del pie de página */
+   
+    height: fit-content;
+    
    
 }
 
 #contenedor_portada {
     width: 400px;
     height: 250px;
-    margin: 10px; /* Espacio entre las portadas */
+    margin: 15px; /* Espacio entre las portadas */
     display: flex;
     flex-direction: column;
     align-items: center; /* Centra verticalmente */

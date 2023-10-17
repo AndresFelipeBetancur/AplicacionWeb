@@ -11,6 +11,7 @@ body, html {
 body {
     background: #0f0f0f ;
     
+    
 }
 
 #caja_video {
@@ -18,9 +19,9 @@ body {
     top: 0;
     left: 0;
     background-color: #0f0f0f;
-    border-radius: 30px;
+    border-radius: 0px 0px 30px 30px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-around;
     align-items: flex-start;
     align-content: stretch;
  
@@ -29,7 +30,7 @@ body {
 
 #video {
     align-self: self-start;
-    border-radius: 30px;
+    border-radius: 0px 0px 30px 30px;
     object-fit: cover;
 }
 
@@ -45,4 +46,32 @@ h2 {
     font-size: 35px;
     text-align: start;
     color: antiquewhite;
+}
+
+#boton {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    color: initial;
+    height: 43px;
+    width: 170px;
+    border-radius:0px;
+    background-color: rgb(154, 165, 165);
+    transition: background-color 0.7s;
+    border-color: #484747;
+    align-self: center;
+    text-align: center;
+    justify-self: center;
+    padding: 10px;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+#boton:hover {
+    background-color: #484747;
+}
+
+#accion {
+    height: 43px;
+    width: 170px;
 }
