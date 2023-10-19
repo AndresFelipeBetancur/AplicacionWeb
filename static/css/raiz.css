@@ -76,7 +76,7 @@ body, html {
 }
 
 #imagenUsuario {
-    border-radius: 20px;
+    border-radius: 38px;
     border: 2px solid transparent; /* Borde inicial transparente */
     position: relative;
     animation: colorChange 2s linear infinite;
@@ -301,7 +301,7 @@ a.button {
 
 #nuevos_videos {
     background: #0f0f0f;
-    height: 230px;
+    height: fit-content;
     display: flex;
     align-items: self-start;
     justify-content: space-evenly;
@@ -310,7 +310,7 @@ a.button {
 
 .caja-videos {
     background-color: #1d1d1d;
-    height: 170px;
+    height: fit-content;
     width: 300px;
     display: flex;
     align-items: start;

@@ -6,6 +6,16 @@
     <title>video viewer online</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/raiz.css' ) }}">
     <link rel="shortcut icon" href="../static/img//CP9.jpg">
+    <script>
+        function validateForm() {
+            var inputValue = document.getElementById("busqueda").value;
+            if (inputValue.trim().length === 0) {
+                alert("Por favor, ingresa al menos un carácter.");
+                return false;
+            }
+            return true;
+        }
+    </script>
 </head>
 <body>
     
@@ -48,7 +58,7 @@
         {% endif %}
         <div id="parte_superior">
             
-            <form method="post" enctype="multipart/form-data" action="/buscar" id="barra_busqueda">
+            <form onsubmit="return validateForm()" method="post" enctype="multipart/form-data" action="/buscar" id="barra_busqueda">
                 <input minlength="2" name="buscar" placeholder="Buscar" id="busqueda" type="text">
                 <button  id="boton" onclick="" type="submit"></button>
             </form>

@@ -14,8 +14,7 @@ class Usuarios:
         self.cursor.execute(sql)
         resultado = self.cursor.fetchall()
         self.conDB.commit()
-        if resultado:
-            return resultado[0][0]  
+        return resultado[0][0]
         
     
     def registrar(self,usuario):

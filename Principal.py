@@ -30,8 +30,9 @@ app.config['CARPETAUP'] = CARPETAUP
 @app.route('/')
 def raiz():
     if session.get('loginOk'):
+        correo = session.get('correo')
         nombre_usuario = session.get('nombreUsuario')
-        foto_usuario = misUsuarios.foto(nombre_usuario)  # Asume que misUsuarios tiene un método foto
+        foto_usuario = misUsuarios.foto(correo) 
         videos = misVideos.buscar()
         return render_template("/raiz.html", nombre=nombre_usuario, foto=foto_usuario, res=videos)
     else:
@@ -77,6 +78,7 @@ def loguear():
         session['nombreUsuario'] = usuario[0][0]
         session['correo'] = correo
         foto = misUsuarios.foto(correo)
+        session['fotoUsuario'] = foto
         resultado = misVideos.buscar()
         return render_template("/raiz.html",bienvenida=f"¡Bienvenido {usuario[0][0]}!",fot=foto,res=resultado)
     else:
@@ -100,19 +102,26 @@ def cierreSesion():
 
 @app.route("/subirVideo")
 def subirVideo():
-    return render_template("subirVideo.html")
+    if session.get('loginOk'):
+        correo = session.get("correo")
+        foto_usuario = misUsuarios.foto(correo)  # Asume que misUsuarios tiene un método foto
+        return render_template("/subirVideo.html", foto=foto_usuario)
+    else:
+        return redirect("/")
 
 @app.route("/subir", methods = ['POST'])
 def subir():
     correo = session.get("correo")
-    nombre_usuario = session.get("nombreUsuario")
+    nombre_usuario = session.get('nombreUsuario')
+    foto_usuario = misUsuarios.foto(session.get("correo"))
     nombre = request.form["nombreVideo"]
     video = request.files["video"]
     portada = request.files["portada"]
-    fotoUsuario = misUsuarios.foto(correo)
-    archivo = [correo,nombre_usuario,nombre,video,portada,fotoUsuario]
+    archivo = [correo,nombre_usuario,nombre,video,portada,foto_usuario]
     misVideos.subir(archivo)
-    return redirect("/")
+    nombre_usuario = session.get('nombreUsuario')
+    foto_usuario = misUsuarios.foto(correo) 
+    return redirect("/",nombre=nombre_usuario, foto=foto_usuario)
 
 @app.route('/ver_video/<video_id>/<nombre_video>')
 def ver_video(video_id,nombre_video):
