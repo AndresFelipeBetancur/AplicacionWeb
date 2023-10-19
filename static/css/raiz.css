@@ -34,10 +34,42 @@ body, html {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    
-    
+}#slider_box {
+    width: 100%;
+    max-height: 300px;
+    overflow: hidden;
+    position: relative;
 }
 
+#slider_box ul {
+    display: flex;
+    padding: 0;
+    list-style: none; /* Añadido para eliminar la viñeta de lista */
+    width: 300%; /* Ancho ajustado para tres imágenes */
+    animation: slide 10s linear infinite;
+    margin: 0; /* Añadido para eliminar el margen por defecto */
+}
+
+#slider_box li {
+    width: 33.33%; /* Ancho ajustado para tres imágenes en una fila */
+    list-style: none; /* Añadido para eliminar la viñeta de lista */
+}
+
+#slider_box img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+@keyframes slide {
+    0% {margin-left: 0;}
+    25% {margin-left: 0;}
+    33.33% {margin-left: -100%;}
+    58.33% {margin-left: -100%;}
+    66.66% {margin-left: -200%;}
+    91.66% {margin-left: -200%;}
+    100% {margin-left: 0;}
+}
 #img_div {
     background: url(../img/imagen-capi-removebg-preview.png)center center / cover no-repeat;
     height: 80px;
