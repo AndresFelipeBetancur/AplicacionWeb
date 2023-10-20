@@ -48,7 +48,7 @@
         
     </div>
     -->
-    <br>
+    
     <div id="articulo">
         {% if fot %}
         <ul id="opciones_usuario">
@@ -70,17 +70,17 @@
             <section id="slider_box">
                 <ul>
                     <li>
-                        <img src="../static/img/facebook-logo-3-1-removebg-preview.png" alt="">
+                        <img src="../static/img/2imagen_contenido_web.jpg" alt="">
                     </li>
                     <li>
-                        <img src="../static/img/CP9.jpg" alt="">
+                        <img src="../static/img/2imagen_contenido_web.jpg" alt="">
                     </li>
                     <li>
-                        <img src="../static/img/capisub.png" alt="">
+                        <img src="../static/img/istockphoto-469993293-612x612.jpg" alt="">
                     </li>
                 </ul>
             </section>
-            <hr>
+            
             <section id="padre_contenido">
                 <h2 id="titulo_contenido" class="texto_pie">Contenido Video viewer</h2>
                     <div id="contenedor_contenido">
@@ -94,9 +94,9 @@
                             </div>
                             <div id="descripcion_portada">
                                 <p id="nombre_portada">{{ video_info[2] }}</p>
-                                <p id="usuario_portada">Subido por: {{ video_info[0] }}</p>
                                 <img id="usuario_imagen" height="45px" width="40px" src="uploads/{{ video_info[4] }}" alt="">
-                                <p id="fecha">Fecha subida: {{video_info[5]}}</p>
+                                <p id="usuario_portada">{{ video_info[0] }}</p>
+                                <p id="fecha">Fue subido: {{video_info[5]}}</p>
                             </div>
                         </div>
                         {% endfor %}

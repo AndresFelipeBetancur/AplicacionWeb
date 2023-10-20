@@ -2,6 +2,7 @@
 * {
     box-sizing: border-box;
     transform: all 0.3s ease-in-out; 
+    
 }
 
 body, html {
@@ -27,18 +28,21 @@ body, html {
   
 #header {
     width: 100%;
-    height: 90px;
+    height: 120px;
     /*background-color: rgb(6, 6, 74);*/
     background-color: black;
     -webkit-backdrop-filter: blur(10px);backdrop-filter: blur(10px);
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-}#slider_box {
+}
+
+#slider_box {
     width: 100%;
     max-height: 300px;
     overflow: hidden;
     position: relative;
+    border: 5px solid black
 }
 
 #slider_box ul {
@@ -72,13 +76,13 @@ body, html {
 }
 #img_div {
     background: url(../img/imagen-capi-removebg-preview.png)center center / cover no-repeat;
-    height: 80px;
-    width: 80px;
+    height: 100px;
+    width: 100px;
 }
 
 #texto_logo {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 15px;
+    font-size: 20px;
     color: rgb(255, 255, 255);
     padding: 2px;
 }
@@ -372,7 +376,7 @@ a.button {
 
 #opciones_usuario li {
     list-style: none; 
-    margin: 0 10px; 
+    margin: 0 ; 
     margin-top: 30px;
 }
 
@@ -385,7 +389,7 @@ a.button {
     text-decoration: none; /* Elimina el subrayado predeterminado en los enlaces */
     display: inline-block; 
     padding: 15px 20px; 
-    border-radius: 5px; 
+    
     color: #000000; 
 }
 
@@ -447,8 +451,17 @@ a.button {
     height: 120px;
 }
 
-#nombre_portada, #usuario_portada, #fecha {
-    color: antiquewhite;
+#nombre_portada  {
+    color: rgb(174, 174, 174);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 19px;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#usuario_portada, #fecha {
+    color: rgb(60, 60, 60);
     font-family: 'Bebas Neue', sans-serif;
     font-size: 17px;
     margin: 0;
@@ -456,7 +469,6 @@ a.button {
     overflow: hidden;
     text-overflow: ellipsis;
 }
-
 #nombre_portada {
     order: 1;
 }
