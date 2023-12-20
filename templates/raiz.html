@@ -6,16 +6,9 @@
     <title>video viewer online</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/raiz.css' ) }}">
     <link rel="shortcut icon" href="../static/img//CP9.jpg">
-    <script>
-        function validateForm() {
-            var inputValue = document.getElementById("busqueda").value;
-            if (inputValue.trim().length === 0) {
-                alert("Por favor, ingresa al menos un carácter.");
-                return false;
-            }
-            return true;
-        }
-    </script>
+    <script src="../static/js/raiz.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
 </head>
 <body>
     
@@ -23,23 +16,29 @@
         <div id="img_div"></div>
         <div id="texto_logo"><h1>video viewer<a id="numero_texto">Beta</a></h1></div>
         <div id="contenedor_sesion">
-            <div id="usuario">
-                <div id="bienvenida">  
-                    <h3 >{{bienvenida}}</h3>
-                </div>  
-                {% if fot %}
-                <img id="imagenUsuario"  width="60" height="60" src="uploads/{{fot}}" alt="">
-                {%endif%}
-            </div>
+            
             <div id="estado_sesion">
                 
+                
+                {% if fot %}
+                    <ul id="lista_desordenada">
+                        <li id="lista_ordenada"><a class="button" id="enlace_cerrar" href="/cerrarSesion">Cerrar Sesión</a></li>
+                    </ul>
+                    
+                    <div id="usuario">
+                  
+                        {% if fot %}
+                        <img id="imagenUsuario"  width="60" height="60" src="uploads/{{fot}}" alt="">
+                        {% endif %}
+                    </div>
+                {% else %}
                 <a class="button" id="enlace_registro" href="/registro">Registrate</a>
                 <a class="button" id="enlace_sesion"  href="/loguin">Inciar Sesión</a>
-                {% if fot %}
-                <a class="button" id="enlace_cerrar" href="/cerrarSesion">Cerrar Sesión</a>
                 {% endif %}
                 
             </div>
+            
+
         </div>
     </div>
 
@@ -66,20 +65,6 @@
         <br>
         
         <div id="contenido">
-            <h2 id="titulo_agregados">Agregados recientemente por el creador</h2>
-            <section id="slider_box">
-                <ul>
-                    <li>
-                        <img src="../static/img/2imagen_contenido_web.jpg" alt="">
-                    </li>
-                    <li>
-                        <img src="../static/img/2imagen_contenido_web.jpg" alt="">
-                    </li>
-                    <li>
-                        <img src="../static/img/istockphoto-469993293-612x612.jpg" alt="">
-                    </li>
-                </ul>
-            </section>
             
             <section id="padre_contenido">
                 <h2 id="titulo_contenido" class="texto_pie">Contenido Video viewer</h2>

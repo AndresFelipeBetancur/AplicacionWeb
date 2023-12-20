@@ -49,6 +49,7 @@ main {
     padding: 11px 17px 4px 17px;
     width: 100%;
     background: transparent;
+    outline: none;
 }
 
 #btn_entrar {
@@ -149,3 +150,13 @@ main {
 #boton:hover {
     background-color: #484747;
 }
+
+.icon {
+    position: absolute;
+    right: 88px;
+    color:#fff;
+    font-size: 1.6em;
+    line-height: 1px;
+
+}
+

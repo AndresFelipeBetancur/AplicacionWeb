@@ -8,24 +8,10 @@
 body, html {
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
-/* Estilo para la barra de desplazamiento */
-/* Para navegadores basados en WebKit como Chrome y Safari */
-::-webkit-scrollbar {
-    width: 9px; /* Ancho de la barra de desplazamiento */
-    
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background: #302e2e; /* Color del "pulgar" de la barra de desplazamiento */
-    border-radius: 4px;
-  }
-  
-  ::-webkit-scrollbar-track {
-    background: #eee; /* Color de fondo de la pista de la barra de desplazamiento */
-  }
-  
+
 #header {
     width: 100%;
     height: 120px;
@@ -37,43 +23,6 @@ body, html {
     align-items: center;
 }
 
-#slider_box {
-    width: 100%;
-    max-height: 300px;
-    overflow: hidden;
-    position: relative;
-    border: 5px solid black
-}
-
-#slider_box ul {
-    display: flex;
-    padding: 0;
-    list-style: none; /* Añadido para eliminar la viñeta de lista */
-    width: 300%; /* Ancho ajustado para tres imágenes */
-    animation: slide 10s linear infinite;
-    margin: 0; /* Añadido para eliminar el margen por defecto */
-}
-
-#slider_box li {
-    width: 33.33%; /* Ancho ajustado para tres imágenes en una fila */
-    list-style: none; /* Añadido para eliminar la viñeta de lista */
-}
-
-#slider_box img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-@keyframes slide {
-    0% {margin-left: 0;}
-    25% {margin-left: 0;}
-    33.33% {margin-left: -100%;}
-    58.33% {margin-left: -100%;}
-    66.66% {margin-left: -200%;}
-    91.66% {margin-left: -200%;}
-    100% {margin-left: 0;}
-}
 #img_div {
     background: url(../img/imagen-capi-removebg-preview.png)center center / cover no-repeat;
     height: 100px;
@@ -98,9 +47,9 @@ body, html {
     width: 1200px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-content:space-between;
-    padding: 25px;
+    
     
 }
 
@@ -115,7 +64,14 @@ body, html {
     border-radius: 38px;
     border: 2px solid transparent; /* Borde inicial transparente */
     position: relative;
+    border-color: #fff;
+    cursor: pointer;
+}
+
+#imagenUsuario:hover {
+    border-radius: 40px;
     animation: colorChange 2s linear infinite;
+    border-color: none;
 }
 
 @keyframes colorChange {
@@ -137,14 +93,13 @@ body, html {
   }
 
 #estado_sesion {
-    height: 45px;
+    height: 100%;
     width: 400px;
-    background: rgb(29, 122, 158);
-    margin-right: 40px;
-    
+    background: black;
+
     display: flex;
     align-items:center;
-    justify-content:flex-start;
+    justify-content:flex-end;
     align-content: center;
     border: 5px solid black;
    
@@ -156,46 +111,106 @@ body, html {
     height: 40px;
     width: 200px;
     border-radius: 25px;
+    color: #fff;
+    
+}
+
+#lista_desordenada {
+    height: 40px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+}
+
+#lista_ordenada {
+    height: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
 }
 
 #enlace_cerrar {
     height: 45px;
-    width: 200px;
-    color: black;
-    background-color: rgb(90, 101, 102);
-    transition: background-color 0.7s;
-   
+    white-space: nowrap;
+    color: rgb(204, 198, 198);
+    background-color: black;
+    transition: color 0.3s ease ease-in-out;
+    
 }
 
-#enlace_cerrar:hover {
-    background-color: rgb(29, 122, 158);
+#enlace_cerrar::before {
+    content: '';
+    position: absolute;
+    bottom: 44px; /* Posición del degradado */
+    height: 2px; /* Altura del degradado */
+    background: linear-gradient(to right, red, blue); /* Degradado de colores */
+    transition: width 0.3s ease ease-in-out; /* Transición para la animación */
 }
+
+#enlace_cerrar:hover::before {
+    width: 100px; /* Ancho del degradado al pasar el ratón por encima */
+}
+
 
 #enlace_sesion {
     height: 45px;
     width: 200px;
-    color: black;
-    background-color: rgb(90, 101, 102);
-    transition: background-color 0.7s;
+    color: rgb(204, 198, 198);
+    background-color: black;
+    transition: color 0.3s ease-in-out;
     
-
 }
+
+
+#enlace_sesion::before {
+    content: '';
+    position: absolute;
+    bottom: 44px; /* Posición del degradado */
+    height: 2px; /* Altura del degradado */
+    background: linear-gradient(to right, red, blue); /* Degradado de colores */
+    transition: width 0.3s ease ease-in-out; /* Transición para la animación */
+}
+
+#enlace_sesion:hover::before {
+    width: 95px; /* Ancho del degradado al pasar el ratón por encima */
+}
+
+
 #enlace_registro {
     height: 45px;
     width: 200px;
     color: black;
-    background-color: rgb(90, 101, 102);
+    background-color: black;
     transition: background-color 0.7s;
-    
-     
+    color: rgb(204, 198, 198);
+    transition: color 0.3s ease-in-out;
 }
 
+
+#enlace_registro::before {
+    content: '';
+    position: absolute;
+    bottom: 44px; /* Posición del degradado */
+    height: 2px; /* Altura del degradado */
+    background: linear-gradient(to right, red, blue); /* Degradado de colores */
+    transition: width 0.3s ease ease-in-out; /* Transición para la animación */
+}
+
+#enlace_registro:hover::before {
+    width: 70px; /* Ancho del degradado al pasar el ratón por encima */
+}
+
+
 #enlace_registro:hover {
-    background-color: rgb(29, 122, 158);
+    background-color: black;
 }
 
 #enlace_sesion:hover {
-    background-color: rgb(29, 122, 158);
+    background-color: black;
 }
 
 #contenedor_imagen_sesion {
@@ -204,18 +219,9 @@ body, html {
     background-color: bisque;
     border-radius: 10px;
 }
-/*
-#barra_izquierda {
-    background-color: rgb(26, 25, 32);
-    height: 100vh;
-    width: 230px;
-    flex-direction: column;
-    border-width: 0px 1px 0px 0px;
-    border-color: none gainsboro none none;
-    border-style: none solid none none;
-    -webkit-backdrop-filter: blur(-800px);backdrop-filter: blur(-900px);
-}
-*/
+
+
+
 body {
     background-color: #0f0f0f;
     
@@ -244,10 +250,6 @@ body {
     background-color: #0f0f0f;
 }
 
-#bienvenida {
-    font-size: 28px;
-    color: antiquewhite;
-}
 
 #imagenUsuario {
     background: url(../img/CP9-fotor-20231002212114.png)center center / cover no-repeat;
@@ -304,7 +306,7 @@ a.button {
     -moz-appearance: button;
     appearance: button;
     background-color: antiquewhite;
-    
+    font-size: 1.1em;
     text-decoration: none;
     color: initial;
     text-align: center;
@@ -315,7 +317,18 @@ a.button {
     
 }
 
+#menu-outline {
+    background-color: black;
+    height: 40px;
+    width: 70px;
+    color: white;
+    cursor: pointer;
+    
+}
 
+#miInputCheck {
+    display: none;
+  }
 
 #contenido {
     width: 100%;
@@ -438,6 +451,7 @@ a.button {
     width: 100%;
     height: 270px; /* Ajusta automáticamente la altura en función del ancho */
     border-radius: 10px;
+    background-color: #302e2e;
     
 }
 
