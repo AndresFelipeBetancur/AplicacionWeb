@@ -145,14 +145,14 @@ body, html {
 #enlace_cerrar::before {
     content: '';
     position: absolute;
-    bottom: 44px; /* Posición del degradado */
-    height: 2px; /* Altura del degradado */
-    background: linear-gradient(to right, red, blue); /* Degradado de colores */
-    transition: width 0.3s ease ease-in-out; /* Transición para la animación */
+    bottom: 44px; 
+    height: 2px;
+    background: linear-gradient(to right, red, blue);
+    transition: width 0.3s ease ease-in-out; 
 }
 
 #enlace_cerrar:hover::before {
-    width: 100px; /* Ancho del degradado al pasar el ratón por encima */
+    width: 100px; 
 }
 
 
@@ -169,14 +169,14 @@ body, html {
 #enlace_sesion::before {
     content: '';
     position: absolute;
-    bottom: 44px; /* Posición del degradado */
-    height: 2px; /* Altura del degradado */
-    background: linear-gradient(to right, red, blue); /* Degradado de colores */
-    transition: width 0.3s ease ease-in-out; /* Transición para la animación */
+    bottom: 44px; 
+    height: 2px; 
+    background: linear-gradient(to right, red, blue); 
+    transition: width 0.3s ease ease-in-out; 
 }
 
 #enlace_sesion:hover::before {
-    width: 95px; /* Ancho del degradado al pasar el ratón por encima */
+    width: 95px; 
 }
 
 
@@ -194,14 +194,14 @@ body, html {
 #enlace_registro::before {
     content: '';
     position: absolute;
-    bottom: 44px; /* Posición del degradado */
-    height: 2px; /* Altura del degradado */
-    background: linear-gradient(to right, red, blue); /* Degradado de colores */
-    transition: width 0.3s ease ease-in-out; /* Transición para la animación */
+    bottom: 44px; 
+    height: 2px;
+    background: linear-gradient(to right, red, blue);
+    transition: width 0.3s ease ease-in-out; 
 }
 
 #enlace_registro:hover::before {
-    width: 70px; /* Ancho del degradado al pasar el ratón por encima */
+    width: 70px; 
 }
 
 

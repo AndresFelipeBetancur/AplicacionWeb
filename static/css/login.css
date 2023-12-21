@@ -47,10 +47,23 @@ main {
     font-size: 18px;
     margin-bottom: 64px;
     padding: 11px 17px 4px 17px;
-    width: 100%;
+    width: 80%;
     background: transparent;
     outline: none;
 }
+
+caja_input {
+    width: 100%;
+    display: flex;
+}
+
+
+.icono {
+    height: 39px;
+    width: 20%;
+    color: white;
+}
+
 
 #btn_entrar {
     border: none;

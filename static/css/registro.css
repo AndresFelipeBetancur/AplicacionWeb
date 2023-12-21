@@ -20,7 +20,7 @@ main {
     padding: 0;
     position: relative;
     display:flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: flex-start;
     align-content: center;
     
@@ -29,7 +29,7 @@ main {
 
 #forma_prueba {
     display: flex;
-    flex-direction:column; /*column*/
+    flex-direction:column; 
     flex-wrap: wrap;
     padding: 30px;
     margin: 0;
@@ -37,9 +37,9 @@ main {
 
 .etiqueta {
     color: rgb(74, 74, 74);
-    font-size: 15px;
-    margin-bottom: 8px;    
-    width: 50%;
+    font-size: 15px;  
+    width: 150px;
+    
 }
 
 .campo {
@@ -52,6 +52,25 @@ main {
     width: 50%;
     background: transparent;
 }
+
+.caja_label {
+    width: 60%;
+    display: flex;
+    align-content: center;
+    
+}
+
+
+ion-icon  {
+    height: 25px;
+    width: 30px;
+    color: white;
+    background-color: transparent;
+    margin-bottom: 5px;
+    
+}
+
+
 
 #btn_entrar {
     border: none;
@@ -69,10 +88,8 @@ main {
     
 
 #lado_der {
-    
     position: absolute;
     right: 0; 
-    
     -webkit-backdrop-filter: blur(30px);backdrop-filter: blur(30px);
     border-radius: 24px;
     margin: 0px;
@@ -92,7 +109,7 @@ main {
 }
 
 #btn_entrar:hover {
-    background-color: #0c0b4c;
+    background-color: #06416b;
 }
 
 main {
@@ -103,7 +120,7 @@ main {
 
 }
         #lado_der {
-        width: 750px;
+        width: 850px;
         height: 650px;
         
     }
@@ -131,8 +148,8 @@ main {
     appearance: button;
     color: initial;
     height: 53px;
-    width: 170px;
-    border-radius:20px ;
+    width: 140px;
+    border-radius:10px ;
     background-color: rgb(154, 165, 165);
     transition: background-color 0.7s;
     border-color: #484747;
@@ -152,6 +169,7 @@ main {
     text-align: center;
     font-family: 'Bebas Neue', sans-serif;
     font-size: 27px;
+    height: 20px;
 }
 
 .input-personalizado {

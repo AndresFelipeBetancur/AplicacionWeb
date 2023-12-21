@@ -6,6 +6,8 @@
     <title>Registrate</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/registro.css' ) }}">
     <link rel="shortcut icon" href="../static/img//CP9.jpg">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
     <main>
@@ -17,14 +19,23 @@
 
             <form method="post" id="forma_prueba" name="" action="/registrarse" enctype="multipart/form-data">
                 <h1 id="Registrate">Registrate</h1>
-                <label for="correo" class="etiqueta">Tu correo electronico</label>
+                <div class="caja_label">
+                    <label for="correo" class="etiqueta">Tu correo electronico</label>
+                    <ion-icon  name="mail-outline"></ion-icon>
+                </div>
                 <input type="email" class="campo" name="correo" id="campo_usuario" inputmode="email" minlength="13" required>
-
-                <label for="campo_usuario" class="etiqueta">Tu nombre de usuario</label>            <!--teclado movil-->  <!--[rango de ingreso], {tamño de ingreso}-->
+                <div class="caja_label">
+                    <label for="campo_usuario" class="etiqueta">Tu nombre de usuario</label>  
+                    <ion-icon name="person-outline"></ion-icon>
+                </div>
+                    
                 <input type="text" name="nombreUsuario" id="campo_usuario"  minlength="3" maxlength="15" tabindex="1" required class="campo"> 
-
-                <label for="campo_clave" class="etiqueta">Tu contraseña</label>
-                <input name="contraseña"  type="password" placeholder="●●●●●" name="campo_clave" id="campo_clave"
+                
+                <div class="caja_label">
+                    <label for="campo_clave" class="etiqueta">Tu contraseña</label>
+                    <ion-icon name="lock-closed-outline"></ion-icon>
+                </div>
+                <input name="contraseña"  type="password" placeholder="●●●●●●●●●●" name="campo_clave" id="campo_clave"
                 tabindex="2" required class="campo">
 
                 <label class="etiqueta" for="fotoUsuario">imagen de usuario: </label>
@@ -33,7 +44,7 @@
                     <button onclick="document.getElementById('input').click()"type="button" class="custom-button">Seleccionar archivo</button>
                 </div>
 
-                <button type="submit" id="btn_entrar" tabindex="3">Entrar</button>
+                <button type="submit" id="btn_entrar" tabindex="3">Confirmar</button>
                 <a href="/Regresar" id="boton">Regresar</a>
 
             </form>
