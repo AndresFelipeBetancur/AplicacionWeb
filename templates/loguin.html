@@ -13,17 +13,20 @@
         <article id="lado_der">
 
             <form method="post" id="forma_prueba" name="" action="/loguear" enctype="multipart/form-data">
-                <div id="caja_input">
+                <h2 id="titulo_formulario">Inicia sesión</h2>
+                <div class="caja_label">
                     <label for="correo" class="etiqueta">Tu correo electronico</label>
                     <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
-                    <input type="email" class="campo" name="correo" id="campo_usuario" inputmode="email" minlength="15" required>
                 </div>
-                <div id="caja_input"></div>
-                <label for="contraseña" class="etiqueta">Tu contraseña</label>
-                <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                <input type="email" class="campo" name="correo" id="campo_usuario" inputmode="email" minlength="15" required>
+                <div class="caja_label">
+                    <label for="contraseña" class="etiqueta">Tu contraseña</label>
+                    <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                </div>
                 <input name="contraseña" placeholder="●●●●●" type="password" name="campo_clave" id="campo_clave"
                 tabindex="2" required class="campo">
                 </div>
+                <p id="recupera_contraseña">¿Olvidaste tu <a href="/recuperaContrasena">contraseña?</a></p>
                 <button type="submit" id="btn_entrar" tabindex="3">Entrar</button>
                 <a href="/Regresar" id="boton" tabindex="4">Regresar</a>
 

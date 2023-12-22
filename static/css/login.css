@@ -29,9 +29,18 @@ main {
 
 #forma_prueba {
     display: flex;
-    flex-direction:column; /*column*/
-    padding: 30px;
+    justify-content: center;
+    flex-direction: column;
+    padding: 25px;
     margin: 0;
+    align-items: center;
+}
+
+#titulo_formulario {
+    font-family: 'Segoe UI', sans-serif;
+    color: white;
+    text-align: center;
+    padding-bottom: 5px;
 }
 
 .etiqueta {
@@ -52,9 +61,11 @@ main {
     outline: none;
 }
 
-caja_input {
-    width: 100%;
+.caja_label {
+    width: 60%;
     display: flex;
+    justify-content: space-around;
+    margin-left: -95px;
 }
 
 
@@ -67,7 +78,7 @@ caja_input {
 
 #btn_entrar {
     border: none;
-    border-radius: 8px;
+    border-radius: 5px;
     color: white;
     font-size: 21px;
     margin: 10px;
@@ -148,9 +159,8 @@ main {
     color: initial;
     height: 43px;
     width: 170px;
-    border-radius:20px ;
+    border-radius:5px ;
     background-color: rgb(154, 165, 165);
-    transition: background-color 0.7s;
     border-color: #484747;
     align-self: center;
     text-align: center;
@@ -165,11 +175,20 @@ main {
 }
 
 .icon {
-    position: absolute;
-    right: 88px;
+    
     color:#fff;
     font-size: 1.6em;
     line-height: 1px;
 
 }
 
+#recupera_contraseña {
+    font-family: 'Segoe UI', sans-serif;
+    color: white;
+    text-align: center;
+}
+
+#campo_clave {
+    margin-bottom: 20px;
+    margin-left: 5px;
+}

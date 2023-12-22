@@ -1,0 +1,143 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transform: all 0.3s ease-in-out;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('../img/iniciarSesion.webp') center center / cover no-repeat;
+}
+
+h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    color: rgb(18, 18, 18);
+    text-align: center;
+    font-size: 2em;
+    padding-bottom: 40px;
+    margin-top: 20px;
+}
+
+#gran_padre {
+    height: 500px;
+    width: 500px;
+    background: rgb(38, 73, 102);
+    
+    
+    
+}
+
+picture {
+    height: fit-content;
+    width: 100%;
+    align-self: center;
+}
+
+img {
+    height: 100px;
+    width: 100px;
+}
+
+#formulario {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    
+}
+
+#caja_formulario {
+    width: 81%;
+    height: 200px;
+
+}
+
+#caja_label {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+#etiqueta {
+    font-family: 'Bebas Neue', sans-serif;
+    color: rgb(11, 11, 11);
+    width: 50%;
+    font-size: 1.5em;
+    height: 30px;
+
+}
+
+span {
+    height: 30px;
+    width: 20%;
+}
+
+#icono {
+    width: 100%;
+    color: rgb(17, 17, 17);
+    height: 30px;
+    
+}
+
+#campo {
+    width: 60%;
+    align-self: flex-start;
+    height: 25px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid black;
+    outline: none;
+    font-size: 1.5em;
+   
+}
+
+#contenedor_botones {
+    width: 100%;
+    display: flex;
+    height: 110px;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+#boton {
+    height: 40px;
+    width: 156px;
+    border: none;
+    background-color: rgb(23, 80, 124);
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 1em;
+    
+}
+
+#boton:hover {
+    background-color: rgb(19, 66, 102);
+}
+
+#boton_regresar {
+    appearance: button;
+    height: 35px;
+    width: 159px;
+    padding: 8px;
+    text-decoration: none;
+    color: black;
+    background-color: rgb(112, 117, 121);
+    text-align: center;
+    font-family: 'Bebas Neue', sans-serif;
+    transition: 0.3s;
+   
+}
+
+#boton_regresar:hover {
+    background-color: rgb(90, 94, 97);
+}

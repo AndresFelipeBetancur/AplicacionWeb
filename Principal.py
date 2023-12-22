@@ -133,6 +133,10 @@ def buscar():
     resultado = misVideos.encontrar(vdBuscar)
     return render_template("/Buscar.html",res=resultado)
 
+@app.route("/recuperaContrasena")
+def recuperaContrasena():
+    return render_template("recuperaContraseña.html")
+    
 
 if __name__=='__main__':
     app.run(host="0.0.0.0",debug=True,port="8090") 
