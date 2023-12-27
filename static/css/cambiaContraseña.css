@@ -36,7 +36,8 @@ h2 {
 picture {
     height: fit-content;
     width: 100%;
-    align-self: center;
+    margin-top: 50px;
+    margin-left: 20px;
 }
 
 img {
@@ -66,33 +67,23 @@ img {
     height: 40px;
     display: flex;
     flex-wrap: nowrap;
+    padding-top: 10px;
 }
 
 #etiqueta {
     font-family: 'Bebas Neue', sans-serif;
     color: rgb(229, 229, 229);
-    width: 50%;
+    width: 100%;
     font-size: 1.5em;
     height: 30px;
 
 }
 
-span {
-    height: 30px;
-    width: 20%;
-}
-
-#icono {
-    width: 100%;
-    color: rgb(229, 229, 229);
-    height: 30px;
-    
-}
 
 #campo {
     width: 65%;
     align-self: flex-start;
-    height: 25px;
+    height: 48px;
     background-color: transparent;
     border: none;
     color: rgb(229, 229, 229);

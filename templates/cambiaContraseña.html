@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambia tu contraseña</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/cambiaContraseña.css' ) }}">
+</head>
+<body>
+    <main id="gran_padre">
+        
+        <form id="formulario" action="/consultarCorreo" method="post">
+            <h2>Cambia tu contraseña</h2>
+            {{msg}}
+            <div id="caja_formulario">
+                <div id="caja_label">
+                    <label id="etiqueta" for="formulario">Escribe tu nueva contraseña</label>
+                    
+                </div>    
+                    <input placeholder="Nueva contraseña" minlength="10" maxlength="40" required id="campo" name="campo" type="email"></input>
+                    <div id="caja_label">
+                        <label id="etiqueta" for="formulario">Escribela nuevamente</label>
+                        
+                    </div>    
+                        <input placeholder="Ingresela de nuevo" minlength="10" maxlength="40" required id="campo" name="campo" type="email"></input>
+                    <div id="contenedor_botones">
+                        <a href="/Regresar"  id="boton_regresar" tabindex="4">Regresar</a>
+                        <button  id="boton" type="submit">Cambiar</button>
+                    </div>
+            </div>
+            <picture><img src="/static/img/imagen-capi-removebg-preview.png" alt=""></picture>
+        </form>
+        
+    </main>
+</body>
+</html>

@@ -19,8 +19,32 @@ h2 {
     color: rgb(229, 229, 229);
     text-align: center;
     font-size: 2em;
-    padding-bottom: 40px;
+    padding-bottom: 10px;
     margin-top: 20px;
+}
+
+p {
+    font-family: 'Bebas Neue', sans-serif;
+    color: rgb(229, 229, 229);
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+#reenviar_codigo {
+    font-family: 'Bebas Neue', sans-serif;
+    color: rgb(229, 229, 229);
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+#reenviar_codigo a {
+    color: white;
+    text-decoration: none;
+}
+
+#reenviar_codigo a:hover {
+    text-decoration:underline;
 }
 
 #gran_padre {
@@ -66,6 +90,7 @@ img {
     height: 40px;
     display: flex;
     flex-wrap: nowrap;
+    justify-content: center;
 }
 
 #etiqueta {
@@ -77,16 +102,11 @@ img {
 
 }
 
-span {
-    height: 30px;
-    width: 20%;
-}
-
-#icono {
+#caja_input {
     width: 100%;
-    color: rgb(229, 229, 229);
-    height: 30px;
-    
+    height: 25px;
+    display: flex;
+    justify-content: center;
 }
 
 #campo {
@@ -99,8 +119,15 @@ span {
     border-bottom: 2px solid rgb(229, 229, 229);
     outline: none;
     font-size: 1.5em;
-   
+
 }
+
+input[type=number]::-webkit-inner-spin-button, /*PARA QUITAR BOTONES DE INCREMENTO Y DECREMENTO*/
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 
 #contenedor_botones {
     width: 100%;

@@ -1,11 +1,12 @@
 from datetime import timedelta
 import os
-from flask import Flask, redirect, render_template, request,send_from_directory,session
+from flask import Flask, redirect, render_template, request,send_from_directory,session,url_for
 import mysql.connector
 from usuarios import Usuarios
 from random import randint
 from videos import Videos
-
+import smtplib
+from email.message import EmailMessage
 
 conexion = mysql.connector.connect(
     host="localhost",
@@ -25,6 +26,11 @@ app.config["PERMANENT_SESSION_LIFETIME"] = timedelta(minutes=40)
 CARPETAUP = os.path.join('uploads')
 app.config['CARPETAUP'] = CARPETAUP
 
+#CONFIGURACION PARA ENVIAR EMAILS
+remitente = "tpscab2023@hotmail.com"
+smtp = smtplib.SMTP("smtp-mail.outlook.com", port=587)
+smtp.starttls()
+smtp.login(remitente, "CAB+12345+tps")
 
 @app.route('/')
 def raiz():
@@ -137,6 +143,42 @@ def buscar():
 def recuperaContrasena():
     return render_template("recuperaContraseña.html")
     
+
+@app.route("/consultarCorreo",methods=['POST'])
+def consultarCorreo():
+    correoU = request.form["campo"]
+    resultado = misUsuarios.buscar(correoU)
+    if len(resultado)<0:
+        mensaje = "No se a encontrado una cuenta asociada al correo ingresado"
+        return render_template("recuperaContraseña.html",msg=mensaje)
+    else:
+        #CONFIGURACION PARA ENVIAR EMAILS
+        remitente = "tpscab2023@hotmail.com"
+        smtp = smtplib.SMTP("smtp-mail.outlook.com", port=587)
+        smtp.starttls()
+        smtp.login(remitente, "CAB+12345+tps")
+        codigo = str(randint(0, 99999)).zfill(5) #ZFILL SE USA PARA QUE EL CODIGO TENGA AL MENOS 5 DIGITOS
+        #SE INICIA EL ENVIO DE LOS MENSAJES
+        mensaje = "Hola,<br>Este es un mensaje de <b>prueba</b><br>\
+            Enviado desde python.<br><br>Atentamente,<br>\
+                CP9"
+        email = EmailMessage()
+        email["From"] = remitente
+        email["To"] = correoU
+        email["subject"] = f"Hola, Tu codigo de verificacion es: {codigo}"
+        email.set_content(mensaje, subtype="html")
+        #SE ENVIA EL HTML
+        smtp.sendmail(remitente,correoU,email.as_string())
+        return render_template("verificaCorreo.html",cod=codigo)
+
+@app.route("/compruebaCorreo/<codigo>",methods=["POST"])
+def compruebaCorreo(codigo):
+    codigoU = request.form["campo"]
+    if codigo == codigoU:
+        return render_template("cambiaContraseña.html")
+    else:
+        mensaje = "EL codigo proporsionado es incorrecto"
+        return render_template("verificaCorreo.html",msg=mensaje)
 
 if __name__=='__main__':
     app.run(host="0.0.0.0",debug=True,port="8090") 
