@@ -17,6 +17,14 @@ class Videos:
         self.conDB.commit()
         return resultado
     
+    def buscarC(self):
+        sql = "SELECT nombreUsuario,video,nombreVideo,portada,FotoUSuario,fechaSubida FROM videos LIMIT 5"
+        self.cursor.execute(sql)
+        resultado = self.cursor.fetchall()
+        self.conDB.commit()
+        return resultado
+    
+    
     def subir(self,archivo):
         # Obtén la fecha actual
         fecha_actual = date.today()

@@ -5,16 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Video viewer</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/verVideo.css' ) }}">
+    <script src="../../static/js/raiz.js"></script>
 </head>
 <body>
     
-    <div class="caja-video" >
-        <div id="accion"><a href="/Regresar" id="boton" tabindex="4">Regresar</a></div>
-        <video height="500px" width="780px" id="video" controls>
-        <source  id="video" src="/uploads/{{video_id}}" type="video/mp4">>
+    <header>
+        <div id="caja_inicio">
+            <div id="img_div"></div>
+            <div id="texto_logo"><h1 id="titulo_pagina">video viewer<a id="numero_texto">Beta</a></h1></div>
+        </div>
+        <div id="parte_superior">
+            
+            <form onsubmit="return validateForm()" method="post" enctype="multipart/form-data" action="/buscar" id="barra_busqueda">
+                <input minlength="2" name="buscar" placeholder="Buscar" id="busqueda" type="text">
+                <button  id="lupa" onclick="" type="submit"></button>
+            </form>
+        </div>
+        <!-- <div id="accion"><a href="/Regresar" id="boton" tabindex="4">Regresar</a></div> -->
+    </header>
+    
+
+    <div id="caja_video" >
+        
+        <video height="500px" width="800px" id="video" controls>
+        <source  id="video" src="/uploads/{{video.id}}" type="video/mp4">>
         </video>
-        <div id="titulo_video"><h2>{{nombre_video}}</h2></div>
+        <div id="titulo_video"><h2>{{video.nombre}}</h2></div>
     </div>
+    
+    <div id="caja-contenido">
+        <div id="anunciantes">
+            <a href="https://www.ejemplo.com">
+                <img src="../../static/img/Banner.jpg" alt="Texto alternativo del banner" width="100%" height=140px">
+            </a>
+        </div>
+        {% for res in contenido %}
+        <div id="sugerido">
+            <a href="{{ url_for('ver_video', video_id=res[1], nombre_video=res[2]) }}">
+                <img id="imagenPortada" src="../../uploads/{{res[3]}}" alt="">
+            </a>
+            <p id="titulo_videos"><b>Titulo video</b></p>
+        </div>
+        {% endfor %}
+    </div>
+
+
     
 </body>
 </html>

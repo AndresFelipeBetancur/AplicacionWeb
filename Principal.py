@@ -130,7 +130,12 @@ def subir():
 
 @app.route('/ver_video/<video_id>/<nombre_video>')
 def ver_video(video_id,nombre_video):
-    return render_template('/verVideo.html', video_id=video_id,nombre_video=nombre_video)
+    videos = misVideos.buscarC()
+    video = {
+        "id": video_id,
+        "nombre": nombre_video,
+    }
+    return render_template('/verVideo.html',video=video,contenido=videos)
 
 
 @app.route("/buscar", methods = ['POST'])

@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
     transform: all 0.3s ease-in-out; 
+    font-family: 'Bebas Neue', sans-serif;
 }
 
 body, html {
@@ -9,43 +10,135 @@ body, html {
 }
 
 body {
-    background: #0f0f0f ;
-    
+    background: #0f0f0f;
+    display: flex;
+    align-items: stretch;
+    align-content: space-around;
+    flex-wrap: wrap;
     
 }
 
-#caja_video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: #0f0f0f;
-    border-radius: 0px 0px 30px 30px;
+header {
+    width: 100%;
+    height: 90px;
+    background-color: black;
     display: flex;
-    justify-content: space-around;
+}
+
+#caja_inicio {
+    width: 300px;
+    height: 90px;
+    display: flex;
+}
+
+#img_div {
+    background: url(../img/imagen-capi-removebg-preview.png)center center / cover no-repeat;
+    height: 90px;
+    width: 80px;
+}
+
+#texto_logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 14px;
+    height: 90px;
+    color: rgb(255, 255, 255);
+    
+}
+
+
+
+#numero_texto {
+    font-size: 32px;
+    color: rgb(30, 144, 144);
+    font-family: 'Bebas Neue', sans-serif;
+    height: 90px;
+}
+
+
+#parte_superior {
+    width: 600px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    
+    background-color:rgb(0, 0, 0);
+}
+
+
+#barra_busqueda {
+    width: 460px;
+    height: 43px;
+    background: transparent;
+    margin-top: 7px;
+    border-radius: 20px;
+    display: flex;
+   
+    
+}
+
+#busqueda {
+    width: 460px;
+    height: 43px;
+    background: transparent;
+    border: 1px solid #484747;
+    border-radius: 20px 0px 0px 20px;
+    color: #5c5b5b;
+    
+}
+
+#lupa {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    text-decoration: none;
+    color: initial;
+    height: 43px;
+    width: 50px;
+    border-radius: 0px 20px 20px 0px;
+    background: url(../img/lupa-removebg-preview.png)center center / cover no-repeat;
+    background-color: rgb(154, 165, 165);
+    transition: background-color 0.3s;
+    border-color: #484747;
+}
+
+
+#caja_video {
+    height: 550px;
+    width: 65%;
+    background-color: #0f0f0f;
+    border-radius: 0px 0px 0px 0px;
+    display: flex;
+    justify-content: flex-start;
     align-items: flex-start;
     align-content: stretch;
- 
-    overflow: hidden; /* Evita que el video se desborde del contenedor */
+    overflow: hidden; 
+    flex-wrap: wrap;
+    
 }
 
 #video {
     align-self: self-start;
-    border-radius: 0px 0px 30px 30px;
+    border-radius: 10px 10px 10px 10px;
     object-fit: cover;
+    margin-left: 30px;
 }
 
 #titulo_video {
     height: 30px;
-    width: 780px;
-    
-    text-align: center;
+    width: 800px;
+    text-align: start;
+    text-justify: start;
     font-family: 'Bebas Neue', sans-serif;
+    margin-left: 20px;
 }
 
 h2 {
-    font-size: 35px;
+    font-size: 25px;
     text-align: start;
     color: antiquewhite;
+    margin: 0;
+    margin-left: 20px;
 }
 
 #boton {
@@ -74,4 +167,53 @@ h2 {
 #accion {
     height: 43px;
     width: 170px;
+}
+
+#caja-contenido {
+    height: 90%;
+    width: 35%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    background: #0f0f0f ;
+    margin: 0;
+    background-color: aquamarine;
+    
+}
+
+#anunciantes {
+    height: 140px;
+    width: 100%;
+    background-color: lawngreen;
+}
+
+#sugerido {
+    height: 130px;
+    width: 90%;
+    margin-left: 15px;
+    display: flex;
+    justify-content: flex-start;
+    align-self: flex-start;
+    border-radius: 5px 0px 0px 5px;
+    background-color: blueviolet;
+    
+}
+
+#imagenPortada {
+    height: 120px;
+    width: 213px;
+    background-color: #302e2e;
+    border-radius: 5px 5px 5px 5px;
+}
+
+#titulo_videos {
+    font-size: 20px;
+    text-decoration: none;
+    width: 200px;
+    height: 20px;
+    text-align: start;
+    margin: 0;
+    text-overflow: ellipsis;
+    color: antiquewhite;
 }

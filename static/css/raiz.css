@@ -449,7 +449,7 @@ a.button {
 
 #imagenPortada {
     width: 100%;
-    height: 270px; /* Ajusta automáticamente la altura en función del ancho */
+    height: 270px; 
     border-radius: 10px;
     background-color: #302e2e;
     
