@@ -31,7 +31,12 @@
         <source  id="video" src="/uploads/{{video.id}}" type="video/mp4">>
         </video>
         <div id="titulo_video"><h2>{{video.nombre}}</h2></div>
+        <div id="informacion_video">
+            <img id="imagen_creador" src="/uploads/{{video.fotoU}}" alt=""> 
+            <p id="nombre_creador">{{video.usuario}}</p> 
+        </div>
     </div>
+
     
     <div id="caja-contenido">
         <div id="anunciantes">
@@ -44,10 +49,15 @@
             <a href="{{ url_for('ver_video', video_id=res[1], nombre_video=res[2]) }}">
                 <img id="imagenPortada" src="../../uploads/{{res[3]}}" alt="">
             </a>
-            <p id="titulo_videos"><b>Titulo video</b></p>
+            <a id="informacion_sugerido" href="{{ url_for('ver_video', video_id=res[1], nombre_video=res[2]) }}">
+                <p id="titulo_videos"><b>{{res[2]}}</b></p>
+                <p id="nombre_creador_sugerido">{{res[0]}}</p>
+            </a>
         </div>
         {% endfor %}
     </div>
+    
+
 
 
     

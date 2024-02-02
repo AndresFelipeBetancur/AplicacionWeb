@@ -13,7 +13,7 @@ body {
     background: #0f0f0f;
     display: flex;
     align-items: stretch;
-    align-content: space-around;
+    /**align-content: space-around;**/
     flex-wrap: wrap;
     
 }
@@ -104,7 +104,7 @@ header {
 
 
 #caja_video {
-    height: 550px;
+    height: fit-content;
     width: 65%;
     background-color: #0f0f0f;
     border-radius: 0px 0px 0px 0px;
@@ -170,7 +170,7 @@ h2 {
 }
 
 #caja-contenido {
-    height: 90%;
+    height: 100%;
     width: 35%;
     display: flex;
     justify-content: flex-end;
@@ -178,14 +178,14 @@ h2 {
     flex-direction: column;
     background: #0f0f0f ;
     margin: 0;
-    background-color: aquamarine;
+    background-color: #0f0f0f ;
     
 }
 
 #anunciantes {
     height: 140px;
     width: 100%;
-    background-color: lawngreen;
+    background-color: #0f0f0f ;
 }
 
 #sugerido {
@@ -196,7 +196,7 @@ h2 {
     justify-content: flex-start;
     align-self: flex-start;
     border-radius: 5px 0px 0px 5px;
-    background-color: blueviolet;
+    background-color: #0f0f0f ;
     
 }
 
@@ -207,13 +207,51 @@ h2 {
     border-radius: 5px 5px 5px 5px;
 }
 
-#titulo_videos {
-    font-size: 20px;
+#informacion_sugerido {
+    height: 120px;
+    width: 212px;
+    background-color: #302e2e;
     text-decoration: none;
-    width: 200px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#nombre_creador_sugerido {
+    text-decoration: none;
+    text-overflow: ellipsis;
+    color: rgb(153, 153, 153);
     height: 20px;
+    align-self: flex-start;
+    margin-top: -15px;
+}
+
+#titulo_videos {
+    font-size: 17px;
+    text-decoration: none;
+    width: 300px;
+    height: fit-content;
     text-align: start;
     margin: 0;
+    margin-left: 5px;
     text-overflow: ellipsis;
     color: antiquewhite;
+    text-decoration: none;
+}
+
+#informacion_video {
+    background: #0f0f0f ;
+    height: 50px;
+    width: 20%;
+    margin-left: 40px;
+    display: flex;
+} #imagen_creador {
+    height: 50px;
+    width: 45px;
+    border-radius: 25px;
+} #nombre_creador {
+    text-overflow: ellipsis;
+    color: antiquewhite;
+    text-align: start;
+    height: 10px;
+    margin-left: 5px;
 }

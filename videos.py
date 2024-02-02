@@ -17,13 +17,19 @@ class Videos:
         self.conDB.commit()
         return resultado
     
-    def buscarC(self):
-        sql = "SELECT nombreUsuario,video,nombreVideo,portada,FotoUSuario,fechaSubida FROM videos LIMIT 5"
+    def buscarC(self,id):
+        sql = f"SELECT nombreUsuario,video,nombreVideo,portada,FotoUSuario,fechaSubida FROM videos WHERE video != '{id}' LIMIT 5 "
         self.cursor.execute(sql)
         resultado = self.cursor.fetchall()
         self.conDB.commit()
         return resultado
     
+    def infoVideo(self,id):
+        sql = f"SELECT nombreUsuario,FotoUsuario,fechaSubida FROM videos WHERE video = '{id}'"
+        self.cursor.execute(sql)
+        resultado = self.cursor.fetchall()
+        self.conDB.commit()
+        return resultado
     
     def subir(self,archivo):
         # Obtén la fecha actual

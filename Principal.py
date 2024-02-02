@@ -130,11 +130,17 @@ def subir():
 
 @app.route('/ver_video/<video_id>/<nombre_video>')
 def ver_video(video_id,nombre_video):
-    videos = misVideos.buscarC()
+    videos = misVideos.buscarC(video_id)
+    
+    infoVideo = misVideos.infoVideo(video_id)
     video = {
         "id": video_id,
         "nombre": nombre_video,
+        "usuario": infoVideo[0][0],
+        "fotoU": infoVideo[0][1],
+        "fechaSubida": infoVideo[0][2]    
     }
+    
     return render_template('/verVideo.html',video=video,contenido=videos)
 
 
