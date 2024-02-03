@@ -186,6 +186,7 @@ h2 {
     height: 140px;
     width: 100%;
     background-color: #0f0f0f ;
+    margin-bottom: 10px;
 }
 
 #sugerido {
@@ -209,7 +210,7 @@ h2 {
 
 #informacion_sugerido {
     height: 120px;
-    width: 212px;
+    width: 243px;
     background-color: #302e2e;
     text-decoration: none;
     display: flex;
@@ -222,7 +223,8 @@ h2 {
     color: rgb(153, 153, 153);
     height: 20px;
     align-self: flex-start;
-    margin-top: -15px;
+    margin-top: -35px;
+    margin-left: 2px;
 }
 
 #titulo_videos {

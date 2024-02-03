@@ -8,29 +8,43 @@
     <link rel="shortcut icon" href="../static/img//CP9.jpg">
 </head>
 <body>
+    <header>
+        <div id="caja_inicio">
+            <div id="img_div"></div>
+            <div id="texto_logo"><h1 id="titulo_pagina">video viewer<a id="numero_texto">Beta</a></h1></div>
+        </div>
+        <div id="parte_superior">
+            
+            <form onsubmit="return validateForm()" method="post" enctype="multipart/form-data" action="/buscar" id="barra_busqueda">
+                <input minlength="2" name="buscar" placeholder="Buscar" id="busqueda" type="text">
+                <button  id="lupa" onclick="" type="submit"></button>
+            </form>
+        </div>
+    </header>
+
     <section id="padre_contenido">
             <div id="contenedor_contenido">
-                <h1 id="titulo_contenido">Coincidencias:</h1>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
+              
                 {% for video_info in res %}
-                <div id="contenedor_portada">
-                    <div id="contenedor">
-                        <a href="{{ url_for('ver_video', video_id=video_info[1], nombre_video=video_info[2]) }}">
-                            <img id="imagenPortada" src="uploads/{{video_info[3]}}" alt="">
-                        </a>
-                    </div>
-                    <div id="descripcion_portada">
-                        <p id="nombre_portada">{{ video_info[2] }}</p>
-                        <p id="usuario_portada">Subido por: {{ video_info[0] }}</p>
+                <a href="{{ url_for('ver_video', video_id=video_info[1], nombre_video=video_info[2]) }}">
+                <div id="contenedor_sugerencias">
+                    <div id="contenedor_portada">
+                        <div id="contenedor">
+                           
+                                <img id="imagenPortada" src="uploads/{{video_info[3]}}" alt="" height="300px" width="300px">
+                            
+                        </div>
+                        
+                            <div id="descripcion_portada">
+                                <p id="nombre_portada">{{ video_info[2] }}</p>
+                                
+                                <img id="foto_usuario_sugerido" src="uploads/{{video_info[4]}}" alt="" height="40px" width="40px">
+                                <p id="usuario_portada">{{ video_info[0] }}</p>
+                            </div>
+                        
                     </div>
                 </div>
+                </a>
                 {% endfor %}
                 <br>
                 <br>
