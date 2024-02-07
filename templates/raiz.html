@@ -28,8 +28,13 @@
                     <div id="usuario">
                   
                         {% if fot %}
-                        <img id="imagenUsuario"  width="60" height="60" src="uploads/{{fot}}" alt="">
+                        
+                        <a href="{{ url_for('verPerfil', nom_usuario=nombre_usuario, fotoU=fot) }}">
+                            <img id="imagenUsuario"  width="60" height="60" src="uploads/{{fot}}" alt="">
+                        </a>
+                        
                         {% endif %}
+                        
                     </div>
                 {% else %}
                 <a class="button" id="enlace_registro" href="/registro">Registrate</a>

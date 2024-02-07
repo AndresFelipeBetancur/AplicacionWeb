@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/verPerfil.css')}}">
+    <title>Document</title>
+</head>
+<body>
+    
+    <header>
+        <div id="caja_inicio">
+            <div id="img_div"></div>
+            <div id="texto_logo"><h1 id="titulo_pagina">video viewer<a id="numero_texto">Beta</a></h1></div>
+        </div>
+        <div id="parte_superior">
+            
+            <form onsubmit="return validateForm()" method="post" enctype="multipart/form-data" action="/buscar" id="barra_busqueda">
+                <input minlength="2" name="buscar" placeholder="Buscar" id="busqueda" type="text">
+                <button  id="lupa" onclick="" type="submit"></button>
+            </form>
+        </div>
+        <!-- <div id="accion"><a href="/Regresar" id="boton" tabindex="4">Regresar</a></div> -->
+    </header>
+
+    <div id="gran_padre">
+        <div id="seccion_informacion">
+            <div id="contenedor_imagen">
+                <img id="imagen_usuario" src="../../uploads/{{foto}}" alt="" height="280px" width="280px">
+            </div>
+            <div id="informacion_usuario">
+                <h2 id="nombre_usuario">{{nom}}</h4>
+            </div>
+        </div>
+        <div id="seccion_contenido_usuario">
+            <div id="encabezado_contenido"></div>
+        </div>
+    </div>
+</body>
+</html>

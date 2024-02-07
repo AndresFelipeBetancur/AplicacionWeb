@@ -39,7 +39,7 @@ def raiz():
         nombre_usuario = session.get('nombreUsuario')
         foto_usuario = misUsuarios.foto(correo) 
         videos = misVideos.buscar()
-        return render_template("/raiz.html", nombre=nombre_usuario, foto=foto_usuario, res=videos)
+        return render_template("/raiz.html",nombre_usuario=nombre_usuario, foto=foto_usuario, res=videos)
     else:
         videos = misVideos.buscar()
         return render_template("/raiz.html",res=videos)
@@ -81,11 +81,12 @@ def loguear():
     if len(usuario)>0:
         session['loginOk'] = True
         session['nombreUsuario'] = usuario[0][0]
+        nombre_usuario = session['nombreUsuario']
         session['correo'] = correo
         foto = misUsuarios.foto(correo)
         session['fotoUsuario'] = foto
         resultado = misVideos.buscar()
-        return render_template("/raiz.html",bienvenida=f"¡Bienvenido {usuario[0][0]}!",fot=foto,res=resultado)
+        return render_template("/raiz.html",nombre_usuario=nombre_usuario,bienvenida=f"¡Bienvenido {usuario[0][0]}!",fot=foto,res=resultado)
     else:
         return render_template("/login.html",msg="Credenciales incorrectas")
 
@@ -104,6 +105,13 @@ def Regresar():
 def cierreSesion():
     session.clear()
     return redirect("/")
+
+@app.route("/verPerfil/<nom_usuario>/<fotoU>")
+def verPerfil(nom_usuario,fotoU):
+    if session.get('loginOk'):
+        return render_template("/verPerfil.html",nom=nom_usuario,foto=fotoU)
+    else:
+        return redirect("/")
 
 @app.route("/subirVideo")
 def subirVideo():
