@@ -114,6 +114,8 @@ header {
     height: 10vh;
     width: 100%;
     background-color: blueviolet;
+    display: flex;
+    justify-content: space-around;
 }
 
 #seccion_informacion {
@@ -128,7 +130,7 @@ header {
 #contenedor_imagen {
     height: 50vh;
     width: 100%;
-    background-color: blue;
+    background-color: #0f0f0f;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -139,16 +141,43 @@ header {
 }
 
 #informacion_usuario {
-    height: 10vh;
-    width: 50%;
-    background-color: aquamarine;
+    height: 13vh;
+    width: 60%;
+    background-color: #9b1b1b;
     margin-top: -97px;
     display: flex;
     transform: translateX(130px);
+    align-items: flex-start;
+    flex-wrap: wrap;
+    
 }
 
 #nombre_usuario {
-    font: 1.5em;
+    width: 100%;
+    text-align: start;
+    height: 2px;
+    color: antiquewhite;
+    
+}
+
+#correo_usuario {
+   
+    height: 10px;
+    color: rgb(165, 161, 156);
+    text-align: start;
+}
+
+a {
+    text-decoration: none;
     color: antiquewhite;
 }
 
+#videos_subidos {
+    text-decoration: none;
+    color: antiquewhite;
+}
+
+#subir_video {
+    text-decoration: none;
+    color: antiquewhite;
+}
